@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[]{graphicx}
+\usepackage{multirow}
+\usepackage{enumitem}
 \graphicspath{ {Figures/} }
 % Set page margins
 \usepackage[top=100pt,bottom=100pt,left=68pt,right=66pt]{geometry}
@@ -34,10 +36,11 @@
 	\vspace{4cm}
 	{\normalsize Zhaofeng Qiu 1101584 \\ % \\ specifies a new line
 	             Chongjing Zhang 1055520 \\
-	             Pin Wang 1056745\par}
-	\vspace{4cm}
+	             Pin Wang 1056745\\
+                 Yicun Tian 1088217\par}
+	\vspace{3cm}
     
-    \centering \includegraphics[scale=0.1]{logo.pdf}
+    \centering \includegraphics[scale=0.12]{logo.pdf}
     
     \vspace{0.5cm}
 		
@@ -62,17 +65,157 @@
 \section{Evolution of document}
 
 \chapter{Project Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Key Stakeholders}
-From the project brief identify the key stakeholders for the project.
+\begin{table}[htbp!]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+&stakeholder&value of product&influence on project\\
+\hline
+\multirow{9}*{internal}
+&Jess and James
+&\begin{tabular}{@{}c@{}}
+JJFresh would gain more users due to\\
+the extension of business mode, so\\
+Jess and James can get more economic\\
+profits from the increased number of\\
+orders delivered by increased users.\end{tabular}
+&\begin{tabular}{@{}c@{}}
+Jess and James defines the requirements\\
+of this project, and may change the\\
+requirements or give feedback while the\\
+project is being implemented.\end{tabular}\\
+\cline{2-4}
+&\begin{tabular}{@{}c@{}}student development\\
+team\end{tabular}
+&\begin{tabular}{@{}c@{}}
+Students would get experience in\\
+developing a complete practical\\
+project. And they would also get a\\
+better understanding of software\\
+process management.
+\end{tabular}
+&\begin{tabular}{@{}c@{}}
+Students will develop this project.
+\end{tabular}\\
+\cline{2-4}
+&subject staff&\begin{tabular}{@{}c@{}}
+Staff including tutors and\\
+coordinator can complete their\\
+teaching tasks.
+\end{tabular}
+&\begin{tabular}{@{}c@{}}
+Staff will give guidance, advice and\\
+feedback to this project at each\\
+development stage.
+\end{tabular}\\
+\hline
+\multirow{7}*{external}
+&customers of JJFresh
+&\begin{tabular}{@{}c@{}}
+Customers would be able to buy fruits\\
+and vegetables in a more convenient\\
+way with quality as good as usual.
+\end{tabular}
+&\begin{tabular}{@{}c@{}}
+Customers can give improvement\\
+suggestions after this project is\\
+deployed.
+\end{tabular}\\
+\cline{2-4}
+&\begin{tabular}{@{}c@{}}fruit and\\
+vegetable supplier\end{tabular}
+&\begin{tabular}{@{}c@{}}
+The suppliers can get more orders\\
+from JJFresh, and also get more\\
+economic profits.
+\end{tabular}
+&\multirow{4}*{\begin{tabular}{@{}c@{}}They have low power of influence\end{tabular}}\\
+\cline{2-3}
+&grocery market
+&\begin{tabular}{@{}c@{}}
+Grocery markets like woolworths and\\
+coles may lose some costumers in\\
+that suburb.\end{tabular}
+&\\
+\hline
+\end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Scope}
 \subsection{What is in-scope?}
-Detail the scope of the project. The execution of the entire project starts with a clear and complete scope definition. Every other element of project planning will relate to scope and to the deliverables listed below. Clearly state what requirements your team is planning to deliver in the project.
+The features that will be delivered in the project are listed below:
+\begin{enumerate}
+  \item Allow customers to login with an email address and a password.
+  \item Add and edit client information such as the name, home address, and up to three multiple contact phone numbers.
+  \item Customers should be able to order produce boxes online. When ordering produce boxes, the customer should be presented with 3 different types of produce boxes:
+  \begin{enumerate}[label=\alph*.]
+    \item Fruit box - \$20
+    \item Vegetable box - \$15
+    \item Mixed fruit and vegetable box - \$18
+  \end{enumerate}
+  \item Select a size of the box namely:\\
+        Small - which is suitable for a couple\\
+        Medium - which is suitable for a family of 4\\
+        Large – which is suitable for a family of 6\\
+        The prices mentioned above are for the small product box only. However, if the customer chooses medium, the cost will double, and if the customer chooses large, then the cost will be tripled.
+  \item Customers should then be able to choose a day and time for delivery. Delivery options are in hour blocks between 4pm and 7pm. For instance, 4-5pm; 5-6pm and 6-7pm. Bookings should be available for the next 7 days only. Only two bookings are allowed in a particular hour.
+  \item When the booking is final, the system should send a confirmation email to the customer with the date, time, type and size of box; along with the price of the box chosen.
+  \item The customers should have the option to cancel an order. When the customer cancels an order, an email of the cancellation should be sent to the customer.
+  \item If the customer needs to modify an order, they will need to cancel the existing order and then re-create the order.
+  \item The owners of JJFresh should have admin login where they can view the list of bookings.
+  \item The website should be accessible from a single URL with different roles.
+
+\end{enumerate}
+
 \subsection{What is out-of-scope?}
-It’s equally important to list what the project team isn’t responsible for delivering. This section provides the project team with the opportunity to clearly indicate what is not in scope of the project where there may be any doubt or confusion.
+The features for future enhancements that will not be implemented by our team are listed below:
+\begin{enumerate}
+  \item Add multiple bookings for the same time slot
+  \item Using AI, calculate delivery times that provide an optimal route for delivery.
+  \item Allow for payment online.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Delivery approach / SDLC - Agile}
+We choose to use Agile SDLC out of Formal, Agile and Hybrid, because we prefer the following advantages of agile compares to the limitations of a formal model such as waterfall.\\
+Advantages of the Agile Model:
+\begin{itemize}
+  \item It is focused client process. So, it makes sure that the client is continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
+  \item Agile teams are extremely motivated and self-organized so it likely to provide a better result from the development projects.
+  \item Agile software development method assures that quality of the development is maintained
+  \item The process is completely based on the incremental progress. Therefore, the client and team know exactly what is complete and what is not. This reduces risk in the development process.
+  \item Agile intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with 5 members.
+\end{itemize}
+Limitations of Waterfall Model:
+\begin{itemize}
+  \item Very difficult to move back to makes changes in the previous phases. It's unknown whether the client will change their requirements.
+  \item The testing process starts once development is over. Hence, it has high chances of bugs to be found later in development where they are expensive to fix.
+  \item Waterfall involves large teams. It decreases coordination among team members. While we have only 5 people in the team.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Business Value (Financial \& Non-Financial Benefits)}
+%\begin{itemize}
+%  \item JJFresh would gain more users due to the extension of business mode, so Jess and James can get more economic %profits from the increased number of orders delivered by increased users.
+%  \item Customers would be able to buy fruits and vegetables in a more convenient way with quality as good as usual.
+%  \item The suppliers can get more orders from JJFresh, and also get more economic profit.
+%\end{itemize}
+JJFresh is currently busy in the morning but almost empty in the afternoon. The deployment of this project will keep JJFrsh's peak business hours to retain old customers who shop in the morning, and shift the afternoon business hours from offline to online, which offers delivery service for current and potential customers who cannot go to JJFresh store at that time. The online store will operate 24 / 7 which is much longer compare to the old business hours, thus provides customers with the convenience of placing orders at any time. With these advantages, the online store project would attack more customers for JJFresh. Therefore can increase fruit and vegetable orders, Jess and James can gain financial benifits, and avoid JJFresh from being closed.
+
+The Deployment of the online store website can also increase the chance of JJFresh being searched by a search engine of a browser, which can improve the exposure, thereby improving brand awareness.
+
+If this business mode achieves success, JJFresh can lead other retail stores to transition from offline to online.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Constraints}
+\begin{itemize}
+  \item team members lack of experience in agile
+  \item team members are unfamiliar with wix/front end techniques/other techniques?
+  \item wix isn't compatible with other front end languages/frameworks, cannot be customized if needed?
+  \item JJFresh didn't do market analysis, whether this business mode will success is unknown
+  \item time is limited to 1 month
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Project Governance}
 \section{Roles and Responsibilities}
