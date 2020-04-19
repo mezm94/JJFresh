@@ -4,6 +4,11 @@
 \usepackage[]{graphicx}
 \usepackage{multirow}
 \usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{ltablex}
+\usepackage{amsmath}
+
 \graphicspath{ {Figures/} }
 % Set page margins
 \usepackage[top=100pt,bottom=100pt,left=68pt,right=66pt]{geometry}
@@ -28,7 +33,7 @@
 	{\normalsize The University of Melbourne \\ 
 		School of Computing and Information Systems \\
 		SWEN90016 Software Processes and Management\\
-		Semester 1 –- 2020 \par}
+		Semester 1 – 2020 \par}
 		\vspace{3cm}
 	{\Huge \textbf{JJFresh -- Project Management Plan}} \\
 	%\vspace{1cm}
@@ -70,78 +75,48 @@
 \section{Key Stakeholders}
 \begin{table}[htbp!]
 \centering
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabularx}{\linewidth}{%
+  |>{\raggedright\arraybackslash}p{1.5cm}%
+  |>{\raggedright\arraybackslash}p{2cm}%
+  |>{\raggedright\arraybackslash}X%
+  |>{\raggedright\arraybackslash}X|%
+  }
 \hline
 &stakeholder&value of product&influence on project\\
 \hline
-\multirow{9}*{internal}
-&Jess and James
-&\begin{tabular}{@{}c@{}}
-JJFresh would gain more users due to\\
-the extension of business mode, so\\
-Jess and James can get more economic\\
-profits from the increased number of\\
-orders delivered by increased users.\end{tabular}
-&\begin{tabular}{@{}c@{}}
-Jess and James defines the requirements\\
-of this project, and may change the\\
-requirements or give feedback while the\\
-project is being implemented.\end{tabular}\\
+\multirow{3}{*}{internal}
+& Jess and James
+& JJFresh would gain more users due to the extension of business mode, so Jess and James can get more economic profits from the increased number of orders delivered by increased users.
+& Jess and James defines the requirements of this project, and may change the requirements or give feedback while the project is being implemented.
+\\
 \cline{2-4}
-&\begin{tabular}{@{}c@{}}student development\\
-team\end{tabular}
-&\begin{tabular}{@{}c@{}}
-Students would get experience in\\
-developing a complete practical\\
-project. And they would also get a\\
-better understanding of software\\
-process management.
-\end{tabular}
-&\begin{tabular}{@{}c@{}}
-Students will develop this project.
-\end{tabular}\\
+& student development team
+& Students would get experience in developing a complete practical project. And they would also get a better understanding of software process management.
+& Students will develop this project.
+\\
 \cline{2-4}
-&subject staff&\begin{tabular}{@{}c@{}}
-Staff including tutors and\\
-coordinator can complete their\\
-teaching tasks.
-\end{tabular}
-&\begin{tabular}{@{}c@{}}
-Staff will give guidance, advice and\\
-feedback to this project at each\\
-development stage.
-\end{tabular}\\
+& Subject staff
+& Staff including tutors and coordinator can complete their teaching tasks.
+& Staff will give guidance, advice and feedback to this project at each development stage.
+\\
 \hline
-\multirow{7}*{external}
-&customers of JJFresh
-&\begin{tabular}{@{}c@{}}
-Customers would be able to buy fruits\\
-and vegetables in a more convenient\\
-way with quality as good as usual.
-\end{tabular}
-&\begin{tabular}{@{}c@{}}
-Customers can give improvement\\
-suggestions after this project is\\
-deployed.
-\end{tabular}\\
+\multirow{3}{*}{external}
+& Customers of JJFresh
+& Customers would be able to buy fruits and vegetables in a more convenient way with quality as good as usual.
+& Customers can give improvement suggestions after this project is deployed.
+\\
 \cline{2-4}
-&\begin{tabular}{@{}c@{}}fruit and\\
-vegetable supplier\end{tabular}
-&\begin{tabular}{@{}c@{}}
-The suppliers can get more orders\\
-from JJFresh, and also get more\\
-economic profits.
-\end{tabular}
-&\multirow{4}*{\begin{tabular}{@{}c@{}}They have low power of influence\end{tabular}}\\
-\cline{2-3}
-&grocery market
-&\begin{tabular}{@{}c@{}}
-Grocery markets like woolworths and\\
-coles may lose some costumers in\\
-that suburb.\end{tabular}
-&\\
+& Fruit and vegetable supplier
+& The suppliers can get more orders from JJFresh, and also get more economic profits.
+& They have low power of influence
+\\
+\cline{2-4}
+& Grocery market
+& Grocery markets like woolworths and coles may lose some costumers in that suburb.
+& They have low power of influence
+\\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -224,7 +199,168 @@ If this business mode achieves success, JJFresh can lead other retail stores to 
 \section{Risk Management}
 \section{Technology}
 \section{Project Planning}
-\section{}
+\textit{<If you chose an agile SDLC, provide a Sprint Plan for the first sprint, by choosing the appropriate feature-level stories, and breaking them into appropriate tasks estimated in hours. >}
+
+\subsection{Product Backlog}
+The detail of product backlog is shown in table \ref{tab:productBacklog}. BFTB Score is the abbreviate of the Bang-for-the-Buck Score, which is a way of measuring how to get the most value in the shortest time. It is used to help assess the priority of the features. The BFTB Score is calculated by the formula below:
+$$
+  \text{BFTB Score} = \frac{\text{Value Point}}{\text{Store Point}}
+$$
+\\
+The story points of different features are estimated by the development team and the SCRUM master, based on the volume, risk, uncertainty and complexity of them. The value points of them are estimated by the product owners. \textbf{Fabonacci sequence} is used to provided relative estimation to both story point and value point.
+\\
+
+\begin{tabularx}{\linewidth}{%
+  >{\raggedright\arraybackslash}p{1.5cm}%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}X%
+  p{1cm}p{1cm}p{1cm}
+  }
+  \toprule
+  Features & User Story & Tasks & Story Point & Value Point & BFTB Score\\
+  \midrule
+  Browse product menu 
+  & As a customer, I want a menu that shows all the products, so that I can know what products are the website selling. 
+  & 1.Show the picture of the products; 2.Show the types of the products; 3.Show the price of the products; 4.The price would change automatically.
+  & 8
+  & 5
+  & 0.625\\
+  \midrule
+  Customer sign up
+  & As customers, I want to sign up for the website, so that I can a member of the website.
+  & 1.Check whether the information of the user is valid; 2.Add the user to the database and send a confirming email to the new member if valid.
+  & 1
+  & 3
+  & 3 
+  \\
+  \midrule
+  Customer sign in and sign out
+  & As customers, I should be able to sign in and sign out, so that I can manage my account and orders.
+  & 1.Sign in, check whether the user exist and whether the user's password correct; 2.Sign out; 3.Handle the problem of forgetting the user password (Allow password reset).
+  & 2
+  & 3
+  & 1.5
+  \\
+  \midrule
+  Customer add and edit client information
+  & As customers, after login, I can add or edit my information like home address, user name, email address, and contact number.
+  & 1.Add and edit the name, email address, home address; 2.Add and edit up to three multiple contact phone numbers(e.g. mobile, home and work numbers).
+  & 1
+  & 3
+  & 3
+  \\
+  \midrule
+  Add products to shopping cart
+  & As customers, after login, I can add or edit my information like home address, user name, email address, and contact number.
+  & 1.Select size, type and amount of the products and add them to shopping cart.
+  & 3
+  & 5
+  & 1.667
+  \\
+  \midrule
+  Manage shopping cart
+  & As a customer, I want to manage my shopping cart, so that I can remove those I don't want or add some more products.
+  & 1.Select the items to pay; 2.Change the amount of items; 3.Delete items; 4.View the price of the items selected.
+  & 5
+  & 5
+  & 1
+  \\
+  \midrule
+  Check out shopping cart
+  & As a customer, I want to choose the day and time for delivery, so that I can get the fruit on the right day.
+  & 1.Choose a day and time for delivery. (Delivery options are in hour blocks between 4 pm and 7 pm. For instance, 4-5 pm; 5 - 6 pm and 6 - 7 pm. Bookings should be available for the next 7 days only. Only two bookings are allowed in a particular hour.); 2.Get a confirming email; 3.Delete items; 4.Add an order to the user's order list.
+  & 8
+  & 5
+  & 0.625
+  \\
+  \midrule
+  Cancel orders
+  & As a customer, I need to get the ability to cancel an order so that I can modify an order and then re-create.
+  & 1.CCancel order; 2.Send emails to both customer and admin.
+  & 2
+  & 2
+  & 1
+  \\
+  \midrule
+  Build database
+  & As an admin, I need a database, so that I can store all the information of customers orders.
+  & 1.Store orders (time, customer info and type, size and among of products); 2.Store user info; 3.Store products info.
+  & 8
+  & 5
+  & 0.625
+  \\
+  \midrule
+  Admin sign in and sign out
+  & As an admin, I want to provide my username and password, so that I can register an admin account.
+  & 1.Sign in; 2. Sign out.
+  & 2
+  & 2
+  & 1
+  \\
+  \midrule
+  View and manage orders
+  & As an admin, I want the specific information of the user's order, so that I can packaging user orders.
+  & 1.Confirm order (change the status of customer's order and send the customer an email); 2.Order rank by date; 3.Cancel order and provide reason (send the customer an email with the reason); 4.View order;
+  & 8
+  & 5
+  & 0.625
+  \\
+  \midrule
+  Manage product infomation
+  & As an admin, I want to manage product information, so that I can change the price or picture of my products.
+  & 1.Change the price of products; 2.Change the pictures of products; 3.Change the type of products; 4.Add products; 5.Delete products.
+  & 3
+  & 2
+  & 0.667
+  \\
+  \midrule
+  Register admin account
+  & As an admin, I need to get the ability to register for a new admin account, so that I can get more admin accounts if I need them.
+  & 1.Provide way for admin account registration.
+  & 1
+  & 2
+  & 2
+  \\
+  \midrule
+  Edit admin account information
+  & As an admin, I may want to edit my admin account information, so that I can change the password.
+  & 1.Provide way for admin account information editing.
+  & 1
+  & 2
+  & 2
+  \\
+  \midrule
+  Add multiple bookings for the same slot
+  & As an admin, I want to add multiple bookings for the same slot in the future. So that I  can employ others to deliver boxes.
+  & 1.Allow multiple bookings for the same slot.
+  & 8
+  & 1
+  & 0.125
+  \\
+  \midrule
+  Using AI to calculate delivery routes and times
+  & As an admin, I want to use AI technology to help me calculate an optimal route and time for delivery.
+  & 1.Create a model and an algorithm for the AI to learn and help calculate the optimal routes and time for delivery.
+  & 13
+  & 1
+  & 0.077
+  \\
+  \midrule
+  Extended to allow for payment online.
+  & As an admin, I want to be paid online, so that I can save my time and improve the delivery efficiency.
+  & 1.Provide ways for online payment.
+  & 13
+  & 1
+  & 0.077
+  \\
+  \bottomrule
+  \\
+  \caption{Product Backlog}  
+  \label{tab:productBacklog}
+\end{tabularx}  
+
+\subsection{Sprint Plan for the first sprint}
+
 
 \chapter{Project Execution, Monitoring and Control}
 \section{Project Status: Friday Week 9}
