@@ -2,14 +2,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[]{graphicx}
+\graphicspath{ {Figures/} }
 \usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{ltablex}
 \usepackage{amsmath}
-
-\graphicspath{ {Figures/} }
+\usepackage[parfill]{parskip}
 % Set page margins
 \usepackage[top=100pt,bottom=100pt,left=68pt,right=66pt]{geometry}
 % Changes the style of chapter headings
@@ -18,6 +18,7 @@
    {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
 % Change distance between chapter header and text
 \titlespacing{\chapter}{0pt}{50pt}{2\baselineskip}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}} 
 
 \pagenumbering{roman}
 
@@ -199,17 +200,14 @@ If this business mode achieves success, JJFresh can lead other retail stores to 
 \section{Risk Management}
 \section{Technology}
 \section{Project Planning}
-\textit{<If you chose an agile SDLC, provide a Sprint Plan for the first sprint, by choosing the appropriate feature-level stories, and breaking them into appropriate tasks estimated in hours. >}
-
 \subsection{Product Backlog}
 The detail of product backlog is shown in table \ref{tab:productBacklog}. BFTB Score is the abbreviate of the Bang-for-the-Buck Score, which is a way of measuring how to get the most value in the shortest time. It is used to help assess the priority of the features. The BFTB Score is calculated by the formula below:
 $$
   \text{BFTB Score} = \frac{\text{Value Point}}{\text{Store Point}}
 $$
-\\
-The story points of different features are estimated by the development team and the SCRUM master, based on the volume, risk, uncertainty and complexity of them. The value points of them are estimated by the product owners. \textbf{Fabonacci sequence} is used to provided relative estimation to both story point and value point.
-\\
 
+The story points of different features are estimated by the development team and the SCRUM master, based on the volume, risk, uncertainty and complexity of the features. The value points of them are estimated by the product owners. \textbf{Fabonacci sequence} is used to provided relative estimation to both story point and value point. Each story point equals about an hour of work.
+\\
 \begin{tabularx}{\linewidth}{%
   >{\raggedright\arraybackslash}p{1.5cm}%
   >{\raggedright\arraybackslash}X%
@@ -217,58 +215,58 @@ The story points of different features are estimated by the development team and
   p{1cm}p{1cm}p{1cm}
   }
   \toprule
-  Features & User Story & Tasks & Story Point & Value Point & BFTB Score\\
+  Feature & User Story & Tasks & Story Point & Value Point & BFTB Score\\
   \midrule
   Browse product menu 
   & As a customer, I want a menu that shows all the products, so that I can know what products are the website selling. 
-  & 1.Show the picture of the products; 2.Show the types of the products; 3.Show the price of the products; 4.The price would change automatically.
+  & 1.Provide a page for showing the list of the products\textit{(3-hour)}; 2.Show the types of the products\textit{(1-hour)}; 3.Show the price of the products\textit{(1-hour)}; 4.The price would change automatically\textit{(1-hour)}; 5.Show the pictures of products\textit{(1-hour)}.
   & 8
   & 5
   & 0.625\\
   \midrule
   Customer sign up
   & As customers, I want to sign up for the website, so that I can a member of the website.
-  & 1.Check whether the information of the user is valid; 2.Add the user to the database and send a confirming email to the new member if valid.
+  & 1.Check whether the information of the user is valid\textit{(1-hour)}; 2.Add the user to the database and send a confirming email to the new member if valid\textit{(1-hour)}.
+  & 2
+  & 2
   & 1
-  & 3
-  & 3 
   \\
   \midrule
   Customer sign in and sign out
   & As customers, I should be able to sign in and sign out, so that I can manage my account and orders.
-  & 1.Sign in, check whether the user exist and whether the user's password correct; 2.Sign out; 3.Handle the problem of forgetting the user password (Allow password reset).
+  & 1.Sign in, check whether the user exist and whether the user's password correct\textit{(1-hour)}; 2.Sign out\textit{(1-hour)}; 3.Handle the problem of forgetting the user password (Allow password reset)\textit{(1-hour)}.
+  & 3
+  & 3
+  & 1
+  \\
+  \midrule
+  Customer add and edit client information
+  & As customers, after login, I can add or edit my information like home address, user name, email address, and contact number.
+  & 1.Add and edit the name, email address, home address\textit{(1-hour)}; 2.Add and edit up to three multiple contact phone numbers\textit{(1-hour)}.
   & 2
   & 3
   & 1.5
   \\
   \midrule
-  Customer add and edit client information
-  & As customers, after login, I can add or edit my information like home address, user name, email address, and contact number.
-  & 1.Add and edit the name, email address, home address; 2.Add and edit up to three multiple contact phone numbers(e.g. mobile, home and work numbers).
-  & 1
-  & 3
-  & 3
-  \\
-  \midrule
   Add products to shopping cart
   & As customers, after login, I can add or edit my information like home address, user name, email address, and contact number.
-  & 1.Select size, type and amount of the products and add them to shopping cart.
-  & 3
+  & 1.Select size, type and amount of the products and add them to shopping cart.\textit{(2-hour)}
+  & 2
   & 5
-  & 1.667
+  & 2.5
   \\
   \midrule
   Manage shopping cart
   & As a customer, I want to manage my shopping cart, so that I can remove those I don't want or add some more products.
-  & 1.Select the items to pay; 2.Change the amount of items; 3.Delete items; 4.View the price of the items selected.
+  & 1.Select the items to pay\textit{(1-hour)}; 2.Change the amount of items\textit{(1-hour)}; 3.Delete items\textit{(1-hour)}; 4.View the price of the items selected\textit{(1-hour)}; 5.Provide a page to show all the items in the shopping cart\textit{(3-hour)}.
+  & 8
   & 5
-  & 5
-  & 1
+  & 0.625
   \\
   \midrule
   Check out shopping cart
   & As a customer, I want to choose the day and time for delivery, so that I can get the fruit on the right day.
-  & 1.Choose a day and time for delivery. (Delivery options are in hour blocks between 4 pm and 7 pm. For instance, 4-5 pm; 5 - 6 pm and 6 - 7 pm. Bookings should be available for the next 7 days only. Only two bookings are allowed in a particular hour.); 2.Get a confirming email; 3.Delete items; 4.Add an order to the user's order list.
+  & 1.Choose a day and time for delivery.\textit{(1-hour)}. Only two bookings are allowed in a particular-hour.); 2.Send a confirming email to the customer\textit{(1-hour)}; 3.Show the day and time which is valid\textit{(2-hour)}; 4.Add an order to the user's order list\textit{(1-hour)}; 5.Handle synchronization problem\textit{(2-hour)}.
   & 8
   & 5
   & 0.625
@@ -276,7 +274,7 @@ The story points of different features are estimated by the development team and
   \midrule
   Cancel orders
   & As a customer, I need to get the ability to cancel an order so that I can modify an order and then re-create.
-  & 1.CCancel order; 2.Send emails to both customer and admin.
+  & 1.Cancel order\textit{(1-hour)}; 2.Send emails to both customer and admin\textit{(1-hour)}.
   & 2
   & 2
   & 1
@@ -284,7 +282,7 @@ The story points of different features are estimated by the development team and
   \midrule
   Build database
   & As an admin, I need a database, so that I can store all the information of customers orders.
-  & 1.Store orders (time, customer info and type, size and among of products); 2.Store user info; 3.Store products info.
+  & 1.Define the order model\textit{(1-hour)}; 2.Define the user information model\textit{(1-hour)}; 3.Define the admin information model\textit{(1-hour)}; 4.Create table and relation\textit{(2-hour)}; 5.Test\textit{(1-hour)}
   & 8
   & 5
   & 0.625
@@ -292,7 +290,7 @@ The story points of different features are estimated by the development team and
   \midrule
   Admin sign in and sign out
   & As an admin, I want to provide my username and password, so that I can register an admin account.
-  & 1.Sign in; 2. Sign out.
+  & 1.Sign in\textit{(1-hour)}; 2. Sign out\textit{(1-hour)}.
   & 2
   & 2
   & 1
@@ -300,7 +298,7 @@ The story points of different features are estimated by the development team and
   \midrule
   View and manage orders
   & As an admin, I want the specific information of the user's order, so that I can packaging user orders.
-  & 1.Confirm order (change the status of customer's order and send the customer an email); 2.Order rank by date; 3.Cancel order and provide reason (send the customer an email with the reason); 4.View order;
+  & 1.Confirm order\textit{(1-hour)}; 2.Order rank by date\textit{(1-hour)}; 3.Cancel order and provide reason\textit{(1-hour)}; 4.Provide a page to show order list with order information attach to it\textit{(4-hour)};
   & 8
   & 5
   & 0.625
@@ -308,50 +306,50 @@ The story points of different features are estimated by the development team and
   \midrule
   Manage product infomation
   & As an admin, I want to manage product information, so that I can change the price or picture of my products.
-  & 1.Change the price of products; 2.Change the pictures of products; 3.Change the type of products; 4.Add products; 5.Delete products.
+  & 1.Change the price of products\textit{(1-hour)}; 2.Change the pictures of products\textit{(1-hour)}; 3.Change the type of products\textit{(1-hour)}; 4.Add products\textit{(1-hour)}; 5.Delete products\textit{(1-hour)}.
+  & 5
   & 3
-  & 2
-  & 0.667
+  & 0.6
   \\
   \midrule
   Register admin account
   & As an admin, I need to get the ability to register for a new admin account, so that I can get more admin accounts if I need them.
-  & 1.Provide way for admin account registration.
+  & 1.Provide way for admin account registration\textit{(1-hour)}.
   & 1
-  & 2
-  & 2
+  & 1
+  & 1
   \\
   \midrule
   Edit admin account information
   & As an admin, I may want to edit my admin account information, so that I can change the password.
-  & 1.Provide way for admin account information editing.
+  & 1.Provide way for admin account information editing\textit{(1-hour)}.
   & 1
-  & 2
-  & 2
+  & 1
+  & 1
   \\
   \midrule
   Add multiple bookings for the same slot
   & As an admin, I want to add multiple bookings for the same slot in the future. So that I  can employ others to deliver boxes.
-  & 1.Allow multiple bookings for the same slot.
+  & 1.Allow multiple bookings for the same slot\textit{(6-hour)}.
   & 8
-  & 1
-  & 0.125
+  & 2
+  & 0.25
   \\
   \midrule
   Using AI to calculate delivery routes and times
   & As an admin, I want to use AI technology to help me calculate an optimal route and time for delivery.
-  & 1.Create a model and an algorithm for the AI to learn and help calculate the optimal routes and time for delivery.
+  & 1.Create a model and an algorithm for the AI to learn and help calculate the optimal routes and time for delivery\textit{(12-hour)}.
   & 13
-  & 1
-  & 0.077
+  & 3
+  & 0.231
   \\
   \midrule
   Extended to allow for payment online.
   & As an admin, I want to be paid online, so that I can save my time and improve the delivery efficiency.
-  & 1.Provide ways for online payment.
+  & 1.Provide ways for online payment\textit{(5-hour)}; 2.Secure user information\textit{(8-hour)}.
   & 13
-  & 1
-  & 0.077
+  & 3
+  & 0.231
   \\
   \bottomrule
   \\
@@ -359,7 +357,98 @@ The story points of different features are estimated by the development team and
   \label{tab:productBacklog}
 \end{tabularx}  
 
-\subsection{Sprint Plan for the first sprint}
+\subsection{Sprint Planning}
+
+\subsubsection{Sprint Cycle}
+\label{sec:sprintCycle}
+The development phase of our project would start on \textbf{Monday, April 25}. Since the final delivery due date of the whole project is \textbf{June 1}, we decided to divide our development into three phases, each corresponding to a sprint.
+
+The first phase is to let the website go online without the function of purchase. The website can display all kinds of information about the products and provide the service of user registration. At the same time, the database is initially established to record the data of users and products. The first sprint will last for two weeks, \textbf{from Monday, April 27 to Friday, May 8}. 
+
+
+In the second phase, we need to realize the function that users place orders to purchase products, and sellers can view and modify user orders. Preliminary testing will also take place at this phase. The second sprint will last for two weeks, \textbf{from Monday, May 11 to Friday, may 22}.
+
+The third stage is mainly based on user feedback to repair the vulnerability, carry out more tests and improve the existing functions. If some functions left over from the first two sprints are not implemented, they will also be solved in this sprint. As the project is nearing its end and there is less work left, the sprint in this phase will last only one week, \textbf{from Monday, May 25 to Friday, May 29.}
+
+On \textbf{the first Monday of every sprint}, a Sprint Planning meeting would be held to select high priority items from the product backlog that the development team can commit to delivering in a single Sprint. The select itmes would be add to Sprint Backlog.
+
+On \textbf{the last Friday of each sprint}, a Sprint Review meeting would be held to demonstrate the new features to Stakeholders, and a Sprint Retrospective meeting would be held to review the sprint.
+
+A 15-minute Daily SCRUM would be held \textbf{everyday} to start up the jobs. Everyone has to share what he/she did yesterday, what he/she plan to do, and what obstacles are slowing him/her.
+
+
+\subsubsection{Velocity Estimating}
+Our team has two developers. Because they are students, they can spend only about one and a half hours a day on the project. They can work five days a week, so the total working hour of a week is 15 hours. We expect each story point to be equivalent to one hour of working time. So for a two-week sprint, the velocity of it is about 30 story points. 
+
+Without calculating the features needed in the future, the total number of project story points is 57. The total velocity of the three sprints is 75 story points. In theory, we have enough time to finish all the workS
+
+\subsection{The First Sprint Plan}
+As mention in section \ref{sec:sprintCycle}, the main goal of the first sprint is to launch a webpage where customers can browse products. Considering both the BFTB Score, which is shown in table \ref{tab:productBacklog} and the actual development needs, the Sprint Backlog of the first sprint is shown in table \ref{tab:firstSprintBacklog}. The total velocity and the total delivery value of the first sprint is 30 story points and is 25, respectively. 
+\\
+\begin{tabularx}{\linewidth}{%
+  l%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}p{1cm}}
+  \toprule
+  Index & Feature & Tasks & Story Point\\
+  \midrule
+  1 
+  & Build database 
+  & 1.Define the order model\textit{(1-hour)}; 2.Define the user information model\textit{(1-hour)}; 3.Define the admin information model\textit{(1-hour)}; 4.Create table and relation\textit{(2-hour)}; 5.Test\textit{(1-hour)}
+  & 8
+  \\
+  \midrule
+  2 
+  & Browse product menu
+  & 1.Provide a page for showing the list of the products\textit{(3-hour)}; 2.Show the types of the products\textit{(1-hour)}; 3.Show the price of the products\textit{(1-hour)}; 4.The price would change automatically\textit{(1-hour)}; 5.Show the pictures of products\textit{(1-hour)}.
+  & 8
+  \\
+  \midrule
+  3
+  & Customer sign up
+  & 1.Check whether the information of the user is valid\textit{(1-hour)}; 2.Add the user to the database and send a confirming email to the new member if valid\textit{(1-hour)}.
+  & 2
+  \\
+  \midrule
+  4
+  & Customer sign in and sign out
+  & 1.Sign in, check whether the user exist and whether the user's password correct\textit{(1-hour)}; 2.Sign out\textit{(1-hour)}; 3.Handle the problem of forgetting the user password (Allow password reset)\textit{(1-hour)}.
+  & 3
+  \\
+  \midrule
+  5
+  & Customer add and edit client information
+  & 1.Add and edit the name, email address, home address\textit{(1-hour)}; 2.Add and edit up to three multiple contact phone numbers\textit{(1-hour)}.
+  & 2
+  \\
+  \midrule
+  6
+  & Manage product infomation
+  & 1.Change the price of products\textit{(1-hour)}; 2.Change the pictures of products\textit{(1-hour)}; 3.Change the type of products\textit{(1-hour)}; 4.Add products\textit{(1-hour)}; 5.Delete products\textit{(1-hour)}.
+  & 5
+  \\
+  \midrule
+  7
+  & Admin sign in and sign out
+  & 1.Sign in\textit{(1-hour)}; 2. Sign out\textit{(1-hour)}.
+  & 2
+  \\
+  \bottomrule
+  \\
+  \caption{Sprint Backlog(4.27 - 5.8)}  
+  \label{tab:firstSprintBacklog}
+\end{tabularx}
+\clearpage
+
+Trello is used as the PMP board to help us manage our SCRUM process. After the first sprint planning, the PMP board of our project is shown in Figure \ref{fig:firstSprintPmpBoard}. The label of the card is about the value point of the feature. The Story point of the feature is shown in the upper right corner of the card.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=\textwidth]{Figures/pmpBoardFirstSprint.png}
+\caption{An ordered fault classification}
+\label{fig:firstSprintPmpBoard}
+\end{figure}
 
 
 \chapter{Project Execution, Monitoring and Control}
