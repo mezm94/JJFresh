@@ -57,7 +57,8 @@
 \end{titlepage}
 
 \chapter*{Executive Summary}\label{sec:ESummary}
-[\textit{Give your stakeholders a concise preview of the project’s plan, purpose and approach. Consolidate the main points of the document to explain why the project is being undertaken, who will be responsible for implementing it, how much it is likely to cost, the desired outcomes and benefits it is likely to produce, and how long it will take to complete. An executive summary should be organised according to the sequence of information presented in the document. Use plain English and ensure all acronyms are fully expanded out the first time they are used. Keep the executive summary as succinct as possible and contained to a single page.}]
+Jess and James plans to create an online store of fruits and vegetables as a JJFresh online sales platform for users to select and place orders. In this way, they want to maintain their existing customer base and remain competitive with other stores. In view of the insufficient budget of Jess and James, the students of registered software project management of the University of Melbourne are employed to develop this system. Based on the consideration of the changes in the needs of the project itself and the size of the development team, they chose an agile Scrum model, which will be assigned tasks to members by a short Sprint. They plan to deliver a product that meets core needs to Jess and James within 2 weeks, and complete 3 iterations of development within 4 weeks to deliver a complete website. The product will implement an online sales platform for Jess and James, thereby bringing them additional economic benefits. On the other hand, for the development team, the project will accumulate actual development experience, which will improve their competitiveness in future. 
+
 \addcontentsline{toc}{chapter}{Executive Summary}
 \pagebreak
 \clearpage
@@ -68,7 +69,11 @@
 \chapter{Introduction}
 \pagenumbering{arabic}
 \section{Purpose of document}
+   This document details how the development team plans, implements, and monitors the development of the JJFresh online store. According to the project requirements specification, this document describes in detail the scope of the project and possible risks, and how to control it. The development team also described the technologies that will be used throughout the development process. In addition, Scrum Master made a project plan for the development team's size and project needs. This document will serve as one of the true sources of all parties involved in the entire development cycle, such as Scrum Master, Product Owner and developers.
+
 \section{Audience of document}
+   All five people in the team participated in the preparation of the document. Firstly, Yicun Tian wrote the Executive Summary (part 2), Introduction (part 4), Roles and Responsibilities (part 6.1), Communication Plan (part 6.2) and Risk management (part 6.3) of the document.Secondly,Hongzhang Li completed Project Information (part 5). Moreover, Pin Wang and Chongjing Zhang as developers completed Technology (part 6.4). Zhangfeng Qiu, who served as Scrum Master, completed the Project Planning (6.5) and final proofreading of all document.
+
 \section{Evolution of document}
 
 \chapter{Project Information}
@@ -163,9 +168,14 @@ If this business mode achieves success, JJFresh can lead other retail stores to 
 \chapter{Project Governance}
 \section{Roles and Responsibilities}
 \section{Communication Plan}
+   Our group first uses “slack” for the main information transfer, such as publishing message notifications, file sharing, etc. Secondly, using “trello” to arrange the various stages of the project plan and the content is managed by the scrum master. Furthermore, “github” is used to manage output products, such as the release of code and report.
+   According to the scrum development cycle and the difficulty of this project development, we will conduct a 15-minute meeting discussion on zoom every day, mainly to summarize the results of yesterday and the arrangement of today's tasks. If a team member is absent from a meeting, the person in charge will use email or telephone to communicate with him.
+
 \section{Risk Management}
 \section{Technology}
 \section{Project Planning}
+The SDLC of our project is SCRUM. Since the key requirements for the initial development provided by Jess and James are fixed, a Fixed-Scope Release Planning would be used to plan our project.
+
 \subsection{Product Backlog}
 The detail of product backlog is shown in table \ref{tab:productBacklog}. BFTB Score is the abbreviate of the Bang-for-the-Buck Score, which is a way of measuring how to get the most value in the shortest time. It is used to help assess the priority of the features. The BFTB Score is calculated by the formula below:
 $$
@@ -173,7 +183,9 @@ $$
 $$
 
 The story points of different features are estimated by the development team and the SCRUM master, based on the volume, risk, uncertainty and complexity of the features. The value points of them are estimated by the product owners. \textbf{Fabonacci sequence} is used to provided relative estimation to both story point and value point. Each story point equals about an hour of work.
-\\
+
+Except for the tree future user stories at the end of the product backlog table, all others are must-have stories because they are key requirements defined by Jess and James.
+\clearpage
 \begin{tabularx}{\linewidth}{%
   >{\raggedright\arraybackslash}p{1.5cm}%
   >{\raggedright\arraybackslash}X%
@@ -323,8 +335,21 @@ The story points of different features are estimated by the development team and
   \label{tab:productBacklog}
 \end{tabularx}  
 
-\subsection{Sprint Planning}
+\subsection{Must-have Story Points}
+Without calculating the features needed in the future, the total number of must-have story points is 57.
+$$
+SP_{total} = 57 \text{ (Story Point)}
+$$
 
+\subsection{Velocity Estimating}
+There are two developers in our team. Since both of them are students, each of them can only spend about 1.2 to 1.5 hours a day on the project. They can work five days a week, so the total working hours of a week are 12 to 15 hours. We expect each story point to be equivalent to one hour of working time. So the min velocity ($V_{min}$) for a two-week sprint is about 24 story points, and the max velocity ($V_{max}$) is about 30 story points. And by using the formula shown below, we can get our minimum and maximum number of sprints, which are 2 and 2.5, respectively.
+$$
+S_{min} = \frac{SP_{total}}{V_{max}}
+\text{, } 
+S_{max} = \frac{SP_{total}}{V_{min}}
+$$
+
+\subsection{Sprint Planning}
 \subsubsection{Sprint Cycle}
 \label{sec:sprintCycle}
 The development phase of our project would start on \textbf{Monday, April 25}. Since the final delivery due date of the whole project is \textbf{June 1}, we decided to divide our development into three phases, each corresponding to a sprint.
@@ -341,12 +366,6 @@ On \textbf{the first Monday of every sprint}, a Sprint Planning meeting would be
 On \textbf{the last Friday of each sprint}, a Sprint Review meeting would be held to demonstrate the new features to Stakeholders, and a Sprint Retrospective meeting would be held to review the sprint.
 
 A 15-minute Daily SCRUM would be held \textbf{everyday} to start up the jobs. Everyone has to share what he/she did yesterday, what he/she plan to do, and what obstacles are slowing him/her.
-
-
-\subsubsection{Velocity Estimating}
-Our team has two developers. Because they are students, they can spend only about one and a half hours a day on the project. They can work five days a week, so the total working hour of a week is 15 hours. We expect each story point to be equivalent to one hour of working time. So for a two-week sprint, the velocity of it is about 30 story points. 
-
-Without calculating the features needed in the future, the total number of project story points is 57. The velocity, the three sprints can provide, is 75 story points, which is larger than 57. In theory, we have enough time to finish all the work.
 
 \subsection{The First Sprint Plan}
 As mention in section \ref{sec:sprintCycle}, the main goal of the first sprint is to launch a webpage where customers can browse products. Considering both the BFTB Score, which is shown in table \ref{tab:productBacklog} and the actual development needs, the Sprint Backlog of the first sprint is shown in table \ref{tab:firstSprintBacklog}. The total velocity and the delivery value of the first sprint is 30 story points and 25 value points, respectively. 
