@@ -75,6 +75,42 @@ Jess and James plans to create an online store of fruits and vegetables as a JJF
    All five people in the team participated in the preparation of the document. Firstly, Yicun Tian wrote the Executive Summary (part 2), Introduction (part 4), Roles and Responsibilities (part 6.1), Communication Plan (part 6.2) and Risk management (part 6.3) of the document.Secondly,Hongzhang Li completed Project Information (part 5). Moreover, Pin Wang and Chongjing Zhang as developers completed Technology (part 6.4). Zhangfeng Qiu, who served as Scrum Master, completed the Project Planning (6.5) and final proofreading of all document.
 
 \section{Evolution of document}
+\begin{tabularx}{0.95\linewidth}{%
+  l%
+  >{\raggedright\arraybackslash}p{2.2cm}%
+  >{\raggedright\arraybackslash}p{1.5cm}%
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  Version & Created by & Date created & Comments\\
+  \midrule
+  Version 1.0
+  & Yicun Tian, Hongkang Li, Pin Wang, Chongjing Zhang, Zhangfeng Qiu
+  & 4.27
+  & In this version, five people of the team cooperated to complete section 1 to 6 of the Project Management Plan. In this process, we mainly carried out the preparation work before development, including the definition of key stakeholders, Scope and SDLC of the project, evaluation of business value, constraints, the definition of people's role in the team, communication plan, risk management, definition of the technology used in the project and project planning.
+  \\
+  \hline
+  Version 1.1
+  & 5.23
+  & 
+  & 
+  \\
+  \midrule
+  Version 1.2
+  & 5.30
+  & 
+  &
+  \\
+  \midrule
+  Version 1.3
+  & 6.5
+  & 
+  & 
+  \\
+  \bottomrule
+  \\
+  \caption{Evolution of document}  
+  \label{tab:evolutionOfDocument}
+\end{tabularx}
 
 \chapter{Project Information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -167,11 +203,157 @@ If this business mode achieves success, JJFresh can lead other retail stores to 
 
 \chapter{Project Governance}
 \section{Roles and Responsibilities}
+\begin{tabularx}{0.95\linewidth}{%
+  l%
+  >{\raggedright\arraybackslash}p{2.2cm}%
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  Roles & Member & Responsibilities \\
+  \midrule
+  Scrum Master
+  & Zhangfeng Qiu
+  & The Scrum Master is the person in charge of the process. His main responsibility is to guide the development team and product owners in daily development activities.
+  \\
+  \midrule
+  Product Owner
+  & Yicun Tian, Hongkang Li, Jess and James
+  & The product owner is the spokesperson for the customer or stakeholders. Their main responsibility is to ensure that product to-do items are transparent and clearly expressed, and everyone in the team has the same understanding of the project.
+  \\
+  \midrule
+  Dev Team Members
+  & Pin Wang, Chongjing Zhang
+  & The Scrum development team is composed of professionals who deliver the incremental work of "Done" products that may be released at the end of each Sprint
+  \\
+  \midrule
+  Subject Matter Expert
+  & Tutor
+  & 
+  \\
+  \bottomrule
+  \\
+  \caption{Roles and Responsibilitiest}  
+  \label{tab:rolesResponsibilities}
+\end{tabularx}
+
 \section{Communication Plan}
-   Our group first uses “slack” for the main information transfer, such as publishing message notifications, file sharing, etc. Secondly, using “trello” to arrange the various stages of the project plan and the content is managed by the scrum master. Furthermore, “github” is used to manage output products, such as the release of code and report.
-   According to the scrum development cycle and the difficulty of this project development, we will conduct a 15-minute meeting discussion on zoom every day, mainly to summarize the results of yesterday and the arrangement of today's tasks. If a team member is absent from a meeting, the person in charge will use email or telephone to communicate with him.
+Our group first uses “slack” for the main information transfer, such as publishing message notifications, file sharing, etc. Secondly, using “trello” to arrange the various stages of the project plan and the content is managed by the scrum master. Furthermore, “github” is used to manage output products, such as the release of code and report.
+
+According to the scrum development cycle and the difficulty of this project development, we will conduct a 15-minute meeting discussion on zoom every day, mainly to summarize the results of yesterday and the arrangement of today's tasks. If a team member is absent from a meeting, the person in charge will use email or telephone to communicate with him.
 
 \section{Risk Management}
+\subsection{Risk Impact Analysis Table}
+\begin{tabularx}{0.95\linewidth}{%
+  >{\raggedright\arraybackslash}p{1cm}%
+  l%
+  >{\raggedright\arraybackslash}p{2cm}%
+  l
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  Risk ID & Risk Type & Description & Probability & Impact & Justification\\
+  \midrule
+  1
+  & Project
+  & The software developed by wix has low scalability.
+  &
+  &
+  &
+  \\
+  \midrule
+  2
+  & Business
+  & Jess and James cannot deliver in time due to unforeseen circumstances.
+  &
+  & If Jess and James cannot deliver the order because of the coronavirus, the economic loss is relatively small. However, if the order information is too large, but the manpower is insufficient, the order cannot be delivered or the delivery is not timely, which will cause the customer to refund the order and bring them huge economic losses. Even they may lose customer expectations and trust.
+  & Because of the current coronavirus, when the condition is serious, Jess and James cannot deliver the product to the door. Considering that only two people, Jess and James, are currently packaging and distributing all orders, when there is too much order information or one of them is sick, it is impossible to deliver fruits and vegetables.
+  \\
+  \midrule
+  3
+  & Business
+  & Cancel orders maliciously or for no reason.
+  &
+  & The user can cancel the order on the day of product delivery or cancel the agreed order after the seller purchases the goods. These cancellations are unreasonable or caused by the buyer ’s own reasons, but these actions will cause the seller to accumulate vegetables and fruits and waste time and human resources.
+  & The buyer may cancel the order for many reasons, but the consequences of this risk need to be borne by the buyer. For example, the buyer may cancel the order because the amount of vegetables and fruits is too large, but it is no longer needed or it is considered more cost-effective. These actions will lead to the occurrence of this risk.
+  \\
+  \midrule
+  4
+  & Business
+  & Buyer declares that there is a problem with the quality of the product received.
+  &
+  & The buyer believes that the fruit or vegetable received is not fresh, or the size, softness and hardness do not meet expectations, resulting in a refund and economic loss to the buyer.
+  & Because the buyer buys the product according to the pictures and descriptions on the website and does not see the real thing. However, if the seller uploads a virtual picture or picks the best of vegetables and fruits to take a picture, it will result in inconsistency between the items received by the buyer and the picture. As a result, buyers do not recognize the product quality and refund the order.
+  \\
+  \midrule
+  5
+  & Project
+  & User cannot receive email in time.
+  &
+  & When the buyer is unable to receive the feedback email in time, the buyer is not sure whether the order has been placed or cancelled successfully. It may cause the buyer to repeat the operation and bring losses to the buyer or seller. Eventually, the user's sense of experience is reduced. For example, a buyer who repeats a booking without receiving an email after ordering a product may cause the buyer to receive 2 copies of the same product and pay an additional fee.
+  & If the network conditions of the buyer or the seller are poor, the network is actually delayed, resulting in the buyer not being able to receive the email immediately after performing the operation. At the same time, if there is a problem due to the system's automatic mail reply function, it will also cause the user to not receive the mail.
+  \\
+  \bottomrule
+  \\
+  \caption{Risk Impact Analysis Table}  
+  \label{tab:riskImpactAnalysisTable}
+\end{tabularx}
+
+\clearpage
+\subsection{Risk Register}
+\begin{tabularx}{0.95\linewidth}{%
+  >{\raggedright\arraybackslash}p{1cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{2cm}}
+  \toprule
+  Risk ID & Trigger & Owner & Response & Response Strategy Type & Resources Required\\
+  \midrule
+  1
+  &
+  & 
+  &
+  &
+  &
+  \\
+  \midrule
+  2
+  & Order volume is too large or the impact of coronavirus
+  & Jess and James
+  & If the coronavirus should affect the delivery, the buyer needs to cancel the order. If the order cannot be delivered in time due to excessive orders, you can hire another person to deliver. 
+  & Mitigate
+  & 
+  \\
+  \midrule
+  3
+  & A user repeatedly cancels an order without reason, or the user cancels a large order
+  & Jess and James
+  & For example, by limiting the number of orders that the user cancels per week or limiting the time when the user cancels the order. Failure to cancel the order within the first 24 hours of the specified delivery time would be a viable solution. For a large number of orders, the seller should require the buyer to advance a part of the deposit in order to make up for the economic loss after canceling the order.
+  & Mitigate
+  &
+  \\
+  \midrule
+  4
+  & The seller's feedback after receiving the product
+  & Jess and James
+  & The chat function can be opened in the software, so that the buyer can leave a message to the seller through the chat box. For example, the kiwi fruit that the buyer wants to get is hard and can be stored for at least 2 days. At the same time, buyers can also use the chat function to provide sellers with videos and photos of vegetables and fruits.
+  & Mitigate
+  &
+  \\
+  \midrule
+  5
+  & User cannot receive mail
+  & user or developers
+  & If this risk occurs due to network extension, the system should be able to automatically detect the user's network conditions and promptly prompt. For example, when the buyer's network conditions are poor, the system should prompt the user that the operation may not be successful when the user submits the order or cancels the order. If the email is not received in time, please contact the seller to check whether the operation is successful. If there is a problem with the function of auto-replying emails, the administrator of the maintenance system should be able to detect it in the background, the system is abnormal, and fix the bug in time.
+  & Mitigate
+  &
+  \\
+  \bottomrule
+  \\
+  \caption{Risk Register}  
+  \label{tab:riskRegister}
+\end{tabularx}
+
 \section{Technology}
 \section{Project Planning}
 The SDLC of our project is SCRUM. Since the key requirements for the initial development provided by Jess and James are fixed, a Fixed-Scope Release Planning would be used to plan our project.
@@ -185,8 +367,7 @@ $$
 The story points of different features are estimated by the development team and the SCRUM master, based on the volume, risk, uncertainty and complexity of the features. The value points of them are estimated by the product owners. \textbf{Fabonacci sequence} is used to provided relative estimation to both story point and value point. Each story point equals about an hour of work.
 
 Except for the tree future user stories at the end of the product backlog table, all others are must-have stories because they are key requirements defined by Jess and James.
-\clearpage
-\begin{tabularx}{\linewidth}{%
+\begin{tabularx}{0.95\linewidth}{%
   >{\raggedright\arraybackslash}p{1.5cm}%
   >{\raggedright\arraybackslash}X%
   >{\raggedright\arraybackslash}X%
@@ -200,7 +381,8 @@ Except for the tree future user stories at the end of the product backlog table,
   & 1.Provide a page for showing the list of the products\textit{(3-hour)}; 2.Show the types of the products\textit{(1-hour)}; 3.Show the price of the products\textit{(1-hour)}; 4.The price would change automatically\textit{(1-hour)}; 5.Show the pictures of products\textit{(1-hour)}.
   & 8
   & 5
-  & 0.625\\
+  & 0.625
+  \\
   \midrule
   Customer sign up
   & As customers, I want to sign up for the website, so that I can a member of the website.
@@ -370,7 +552,7 @@ A 15-minute Daily SCRUM would be held \textbf{everyday} to start up the jobs. Ev
 \subsection{The First Sprint Plan}
 As mention in section \ref{sec:sprintCycle}, the main goal of the first sprint is to launch a webpage where customers can browse products. Considering both the BFTB Score, which is shown in table \ref{tab:productBacklog} and the actual development needs, the Sprint Backlog of the first sprint is shown in table \ref{tab:firstSprintBacklog}. The total velocity and the delivery value of the first sprint is 30 story points and 25 value points, respectively. 
 \\
-\begin{tabularx}{\linewidth}{%
+\begin{tabularx}{0.95\linewidth}{%
   l%
   >{\raggedright\arraybackslash}p{2cm}%
   >{\raggedright\arraybackslash}X%
