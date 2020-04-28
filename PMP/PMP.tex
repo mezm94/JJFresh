@@ -168,6 +168,8 @@ If this business mode achieves success, JJFresh can lead other retail stores to 
 \section{Risk Management}
 \section{Technology}
 \section{Project Planning}
+The SDLC of our project is SCRUM. Since the key requirements for the initial development provided by Jess and James are fixed, a Fixed-Scope Release Planning would be used to plan our project.
+
 \subsection{Product Backlog}
 The detail of product backlog is shown in table \ref{tab:productBacklog}. BFTB Score is the abbreviate of the Bang-for-the-Buck Score, which is a way of measuring how to get the most value in the shortest time. It is used to help assess the priority of the features. The BFTB Score is calculated by the formula below:
 $$
@@ -175,7 +177,9 @@ $$
 $$
 
 The story points of different features are estimated by the development team and the SCRUM master, based on the volume, risk, uncertainty and complexity of the features. The value points of them are estimated by the product owners. \textbf{Fabonacci sequence} is used to provided relative estimation to both story point and value point. Each story point equals about an hour of work.
-\\
+
+Except for the tree future user stories at the end of the product backlog table, all others are must-have stories because they are key requirements defined by Jess and James.
+\clearpage
 \begin{tabularx}{\linewidth}{%
   >{\raggedright\arraybackslash}p{1.5cm}%
   >{\raggedright\arraybackslash}X%
@@ -325,8 +329,21 @@ The story points of different features are estimated by the development team and
   \label{tab:productBacklog}
 \end{tabularx}  
 
-\subsection{Sprint Planning}
+\subsection{Must-have Story Points}
+Without calculating the features needed in the future, the total number of must-have story points is 57.
+$$
+SP_{total} = 57 \text{ (Story Point)}
+$$
 
+\subsection{Velocity Estimating}
+There are two developers in our team. Since both of them are students, each of them can only spend about 1.2 to 1.5 hours a day on the project. They can work five days a week, so the total working hours of a week are 12 to 15 hours. We expect each story point to be equivalent to one hour of working time. So the min velocity ($V_{min}$) for a two-week sprint is about 24 story points, and the max velocity ($V_{max}$) is about 30 story points. And by using the formula shown below, we can get our minimum and maximum number of sprints, which are 2 and 2.5, respectively.
+$$
+S_{min} = \frac{SP_{total}}{V_{max}}
+\text{, } 
+S_{max} = \frac{SP_{total}}{V_{min}}
+$$
+
+\subsection{Sprint Planning}
 \subsubsection{Sprint Cycle}
 \label{sec:sprintCycle}
 The development phase of our project would start on \textbf{Monday, April 25}. Since the final delivery due date of the whole project is \textbf{June 1}, we decided to divide our development into three phases, each corresponding to a sprint.
@@ -343,12 +360,6 @@ On \textbf{the first Monday of every sprint}, a Sprint Planning meeting would be
 On \textbf{the last Friday of each sprint}, a Sprint Review meeting would be held to demonstrate the new features to Stakeholders, and a Sprint Retrospective meeting would be held to review the sprint.
 
 A 15-minute Daily SCRUM would be held \textbf{everyday} to start up the jobs. Everyone has to share what he/she did yesterday, what he/she plan to do, and what obstacles are slowing him/her.
-
-
-\subsubsection{Velocity Estimating}
-Our team has two developers. Because they are students, they can spend only about one and a half hours a day on the project. They can work five days a week, so the total working hour of a week is 15 hours. We expect each story point to be equivalent to one hour of working time. So for a two-week sprint, the velocity of it is about 30 story points. 
-
-Without calculating the features needed in the future, the total number of project story points is 57. The velocity, the three sprints can provide, is 75 story points, which is larger than 57. In theory, we have enough time to finish all the work.
 
 \subsection{The First Sprint Plan}
 As mention in section \ref{sec:sprintCycle}, the main goal of the first sprint is to launch a webpage where customers can browse products. Considering both the BFTB Score, which is shown in table \ref{tab:productBacklog} and the actual development needs, the Sprint Backlog of the first sprint is shown in table \ref{tab:firstSprintBacklog}. The total velocity and the delivery value of the first sprint is 30 story points and 25 value points, respectively. 
