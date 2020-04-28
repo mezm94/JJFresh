@@ -2,7 +2,6 @@
 .DS_Store
 
 ### PDF ###
-*.pdf
 
 ### Latex ###
 *.aux

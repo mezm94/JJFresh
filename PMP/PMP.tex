@@ -518,18 +518,24 @@ Except for the tree future user stories at the end of the product backlog table,
 \end{tabularx}  
 
 \subsection{Must-have Story Points}
-Without calculating the features needed in the future, the total number of must-have story points is 57.
+Without calculating the features needed in the future, the total number of must-have story points is 60.
 $$
-SP_{total} = 57 \text{ (Story Point)}
+SP_{total} = 60 \text{ (Story Point)}
 $$
 
 \subsection{Velocity Estimating}
-There are two developers in our team. Since both of them are students, each of them can only spend about 1.2 to 1.5 hours a day on the project. They can work five days a week, so the total working hours of a week are 12 to 15 hours. We expect each story point to be equivalent to one hour of working time. So the min velocity ($V_{min}$) for a two-week sprint is about 24 story points, and the max velocity ($V_{max}$) is about 30 story points. And by using the formula shown below, we can get our minimum and maximum number of sprints, which are 2 and 2.5, respectively.
+There are two developers in our team. Since both of them are students, each of them can only spend about 1.2 to 1.5 hours a day on the project. They can work five days a week, so the total working hours of a week are 12 to 15 hours. We expect each story point to be equivalent to one hour of working time. So the min velocity ($V_{min}$) for a two-week sprint is about 24 story points, and the max velocity ($V_{max}$) is about 30 story points. And by using the formula shown below, we can get our minimum and maximum number of sprints, which are 2 and 2.5, respectively. The inital burndown chart is shown on figure \ref{fig:burndown1}.
 $$
 S_{min} = \frac{SP_{total}}{V_{max}}
 \text{, } 
 S_{max} = \frac{SP_{total}}{V_{min}}
 $$
+\begin{figure}[htp]
+\centering
+\includegraphics[width=\textwidth]{Figures/burndown1.pdf}
+\caption{Initial Burndown Chart}
+\label{fig:burndown1}
+\end{figure}
 
 \subsection{Sprint Planning}
 \subsubsection{Sprint Cycle}
@@ -539,7 +545,7 @@ The development phase of our project would start on \textbf{Monday, April 25}. S
 The first phase is to let the website go online without the function of purchase. The website can display all kinds of information about the products and provide the service of user registration. At the same time, the database is initially established to record the data of users and products. The first sprint will last for two weeks, \textbf{from Monday, April 27 to Friday, May 8}. 
 
 
-In the second phase, we need to realize the function that users place orders to purchase products, and sellers can view and modify user orders. Preliminary testing will also take place at this phase. The second sprint will last for two weeks, \textbf{from Monday, May 11 to Friday, may 22}.
+In the second phase, we need to realize the function that users place orders to purchase products, and sellers can view and modify user orders. Preliminary testing will also take place at this phase. The second sprint will last for two weeks, \textbf{from Monday, May 11 to Friday, May 22}.
 
 The third stage is mainly based on user feedback to repair the vulnerability, carry out more tests and improve the existing functions. If some functions left over from the first two sprints are not implemented, they will also be solved in this sprint. As the project is nearing its end and there is less work left, the sprint in this phase will last only one week, \textbf{from Monday, May 25 to Friday, May 29.}
 
@@ -606,7 +612,6 @@ As mention in section \ref{sec:sprintCycle}, the main goal of the first sprint i
   \caption{The first Sprint Backlog (4.27 - 5.8)}  
   \label{tab:firstSprintBacklog}
 \end{tabularx}
-\clearpage
 
 Trello is used as the PMP board to help us manage our SCRUM process. After the first sprint planning, the PMP board of our project is shown in Figure \ref{fig:firstSprintPmpBoard}. The label of the card is about the value point of the feature. The Story point of the feature is shown in the upper right corner of the card.
 
