@@ -59,7 +59,7 @@
 \chapter*{Executive Summary}\label{sec:ESummary}
    Jess and James plans to create an online store of fruits and vegetables as a JJFresh online sales platform for users to select and place orders. In this way, they want to maintain their existing customer base and remain competitive with other stores. Since Jess and James have always been small businesses, the budget is not sufficient, the students of registered software project management of the University of Melbourne are employed to develop this system.    
    Firstly, the development team fully understood the needs of Jess and James. After two group meetings, they determined all the requirements, development models and risk analysis of the project. In addition, predict the possible problems and put forward corresponding solutions.Based on the consideration of the changes in the needs of the project itself and the size of the development team, they chose an agile Scrum model, which will be assigned tasks to members by a short Sprint. In the first phase (4.28-5.8), they plan to deliver a product that meets core requirements to Jess and James within 2 weeks. For instance, the website can implement basic functions such as user login, product selection, and order cancellation. After discussing with Jess and James, it is expected that the second stage of development work will begin on May 11. The core work at this stage is to improve other user needs, such as presenting JJFresh products in a more beautiful way. In the end, 3 iterations of development will be completed within 5 weeks (4.27-5.29), and then the complete website will be delivered.
-   The entire development cycle is expected to be 5 weeks, and it will cost Jess and James about $ 3,000 to complete.The product will provide Jess and James with an online sales channel, thereby bringing them additional economic benefits. On the other hand, for the development team, the project will accumulate actual development experience for school students, which will improve their competitiveness in future job search.
+   The entire development cycle is expected to be 5 weeks, and it will cost Jess and James about \$ 3,000 to complete.The product will provide Jess and James with an online sales channel, thereby bringing them additional economic benefits. On the other hand, for the development team, the project will accumulate actual development experience for school students, which will improve their competitiveness in future job search.
 
 
 \addcontentsline{toc}{chapter}{Executive Summary}
@@ -286,6 +286,7 @@ Our group first uses “slack” for the main information transfer, such as publ
 
 According to the scrum development cycle and the difficulty of this project development, we will conduct a 15-minute meeting discussion on zoom every day, mainly to summarize the results of yesterday and the arrangement of today's tasks. If a team member is absent from a meeting, the person in charge will use email or telephone to communicate with him.
 
+\clearpage
 \section{Risk Management}
 \subsection{Risk Impact Analysis Table}
 We follow the following scoring rules to assess the impact of each risk:
@@ -297,8 +298,7 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
   >{\raggedright\arraybackslash}p{1cm}%
   l%
   >{\raggedright\arraybackslash}p{2cm}%
-  l
-  >{\raggedright\arraybackslash}X%
+  ll%
   >{\raggedright\arraybackslash}X}
   \toprule
   Risk ID & Risk Type & Description & Probability & Impact & Justification\\
@@ -334,8 +334,6 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
   & 2
   & If the network conditions of the buyer or the seller are poor, the network is actually delayed, resulting in the buyer not being able to receive the email immediately after performing the operation. When the buyer is unable to receive the feedback email in time, the buyer is not sure whether the order has been placed or cancelled successfully. It may cause the buyer to repeat the operation and bring losses to the buyer or seller. Eventually, the user's sense of experience is reduced. For example, a buyer who repeats a booking without receiving an email after ordering a product may cause the buyer to receive 2 copies of the same product and pay an additional fee.
   \\
-  \midrule
-  \\
   \bottomrule
   \\
   \caption{Risk Impact Analysis Table}  
@@ -352,7 +350,8 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
   >{\raggedright\arraybackslash}p{2cm}%
   >{\raggedright\arraybackslash}p{2cm}}
   \toprule
-  Risk ID & Trigger & Owner & Response & Response Strategy Type & Resources Required\\
+  Risk ID & Trigger & Owner & Response & Response Strategy Type & Resources Required
+  \\
   \midrule
   1
   & Jess and James' extended functionality cannot be achieved
@@ -380,11 +379,10 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
   \midrule
   4
   & User cannot receive mail
-  & users(Jess & James and users)
+  & users(Jess \& James and users)
   & If this risk occurs due to network extension, the system should be able to automatically detect the user's network conditions and promptly prompt. For example, when the buyer's network conditions are poor, the system should prompt the user that the operation may not be successful when the user submits the order or cancels the order. If the email is not received in time, please contact the seller to check whether the operation is successful. If there is a problem with the function of auto-replying emails, the administrator of the maintenance system should be able to detect it in the background, the system is abnormal, and fix the bug in time.
   & Mitigate
   & The system needs to consume resources to detect the user's network environment and react to it.
-  \\
   \\
   \bottomrule
   \\
