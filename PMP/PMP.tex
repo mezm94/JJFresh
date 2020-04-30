@@ -115,92 +115,136 @@
   \label{tab:evolutionOfDocument}
 \end{tabularx}
 
-\chapter{Project Information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Project Information}
 \section{Key Stakeholders}
-\begin{enumerate}
-  \item Jess and James: they are product owner who define the features, contents of this project, JJFresh online store website, and responsible for the benefits of it.
-  \item Team: In this project, a group of students will come to develop it under the employment of the product owner. The project cannot be developed if there no people come to implement it.
-  \item Customer: Consumption by customers is the whole of the business in this project. Customers will purchase fruit and vegetable on Online store, and the consumption is the majority of the income of JJFresh.
-\end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabularx}{0.95\linewidth}{%
+  >{\raggedright\arraybackslash}l%
+  >{\raggedright\arraybackslash}p{1.5cm}%
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  Stakeholders & Internal/ External & Influence on Project \\
+  \midrule
+  Jess and James
+  & Internal
+  & Jess and James are the people who defined the requirements of the project. They will not directly participate in the development of the online store website. They are users of the website and can provide feedback to the development team during the development process.
+  \\
+  \midrule
+  The teaching team
+  & Internal
+  & The teaching team of SWEN90016 is playing the role of Product Owner in the project. They are responsible for contact with Jess and James and understand their need.  They cooperate with the SCRUM master of the project and help define the product backlog. Also, they give advice and feedback to the student team during the development process.
+  \\
+  \midrule
+  The student team
+  & Internal
+  & The student team cooperates as a SCRUM team in the project. They are responsible for both planning and developing the online store project. 
+  \\
+  \midrule
+  Customers
+  & External
+  & The satisfaction of the customers is an important factor for project success. The main source of website revenue comes from them. Their feedback can help the development team improve the application.
+  \\
+  \bottomrule
+  \\
+  \caption{Stakeholder Register}  
+  \label{tab:stakeholderRegister}
+\end{tabularx}
 
 \section{Scope}
 \subsection{What is in-scope?}
 \begin{enumerate}
-  \item As Jess and James, they want to establish a JJFresh online store website that can serve customers are within 10km. The online store will decrease the opening hours of the retail shop part and cost more time in packing items and delivering.
-  \item As customers, they need a platform to purchase fruit and vegetable and it will deliver their orders to their hands, so that they can save the time of traveling to the physical store and be safer than shopping after midnight.
+  \item Login system: User need to register an account with personal information (name, phone number, email, address etc.) when the first-time use. They can login to the online store website after registration by inputting their username and password.
+  
+  High priority: Online store website is not for browsing information, it is the platform for trading fruits and vegetables. Every user will purchase products through their account, which is the basic function of this online store website.
+
+  \item Management of personal information: User can add or edit their personal information. For example, if they change their phone number or move to the new house, updating the personal information will be the necessary.
+  
+  High priority: If the customers change their phone number or address, this function is important to avoid some trouble caused by information asymmetry. For example, Jess and James may delivery products to the wrong address and cannot contact buyer.
+  
+  \item Commodity display system: Website should display all type of the products with different size and price to the users whenever they are going to purchase or just browse it.
+  
+  High priority: User should know which products are sold in this online store and its size and price. Purchase cannot be made without this function because customers do not even know which fruit and vegetable they can buy.
+  
+  \item Order processing system: User can place their orders after selecting what they want. They can also change or cancel their orders. Jess and James can management these orders in the website background.
+  
+  High priority: It is the basic part of the purchase function. Online store cannot do any business without orders.
+  
+  \item Message confirmation function: After placing the orders, Jess and James will deal with the orders. If the orders are confirmed, a message will be sent to the users to let they know their orders are confirmed.
+  
+  High priority: Confirmation system is the important part in the business online. If the customers place the order while the store owner ignore it, they will never know whether their orders are confirmed or not without confirmation message system.
+  
+  \item A database which can store user account, order list, product information.
+  
+  High priority: Online store is a type of software products which need database to store more and more data.
+  
+  \item Date selecting function: In this project, customer should be able to choose a day and time for delivery.
+  
+  High priority: Because JJFresh online store offer delivery service, the date selecting system is the important part of delivery.
 \end{enumerate}
 \subsection{What is out-of-scope?}
+The future enhancements are out-of-scope
 \begin{enumerate}
-  \item Customers: This project does not contain deal with the effect of attracting customers. How many customers will visit and consumption in the online store has nothing to do with the development.
-  \item The sales of the online store: When the project is finished, no matter what sales of the online store, it has nothing to do with the project development. Jess and Jame should be responsible for the daily operation of JJFresh online store, including make some discount to attract more people.
-  \item Fruit and vegetable suppliers: Because of the online store can sell more products than physical store, so the more suppliers need to be chosen. However, Suppliers have a direct relationship with product owner. This project does not contain deal with the supplier of the online store. Jess and Jame should concern about choosing which suppliers and have the business with them.
+  \item Online payment system.
+  \item Navigation system on delivery.
+\end{enumerate}
+The following are more out-of-scope
+\begin{enumerate}
+  \item Distance judgment function. Jess and James should determine the distance between courier destination and JJFresh within 10km by themselves.
+  \item Communication service with customers except confirmation message sending. Jess and James decide how to communicate with their users when necessary, such as call or email to him/her.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Delivery approach / SDLC - Agile}
-LHK
-
-Agile Scrum is the popular model that be used for website project.
-
-This project is developed through a student group. Agile Scrum team are typically 6-9 people, without any traditional software engineers, and the team members work together to complete the set of work they have collectively committed to complete within a sprint (1). Compared to the other models, for instance, Incremental SDLC requires more resources and management attention, but the group members are students who need to spend more time on other subjects and cannot obtain enough resources like the professional software engineer.
-
-This project is the online store website which greatly affected by market change and there is may be some change after the process in the underway. For example, product selection in the project maybe add more size of box or more type of box because of the market change during the development. Waterfall SDLC is difficult to accommodate these changes in the development, while Agile Scrum can adapt regular in the changing circumstances.
-
-It is necessary to release the website as soon as possible to promote the online store. The first version can have only the product list and the introduction of online store to attract customers. When the final build online, JJFresh will have many customers who cannot wait to try its products. Agile Scrum can satisfy this point. In the development of this project, Agile Scrum can deliver many versions of project, and face to meet the increasing customer demands and needs. Compare to the Incremental Model, both of them delivery many build.
-
-We choose to use Agile SDLC out of Formal, Agile and Hybrid, because we prefer the following advantages of agile compares to the limitations of a formal model such as waterfall.
-
-Advantages of the Agile Model:
-\begin{itemize}
-  \item It is focused client process. So, it makes sure that the client is continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
-  \item Agile teams are extremely motivated and self-organized so it likely to provide a better result from the development projects.
-  \item Agile software development method assures that quality of the development is maintained
-  \item The process is completely based on the incremental progress. Therefore, the client and team know exactly what is complete and what is not. This reduces risk in the development process.
-  \item Agile intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with 5 members.
-\end{itemize}
-Limitations of Waterfall Model:
-\begin{itemize}
-  \item Very difficult to move back to makes changes in the previous phases. It's unknown whether the client will change their requirements.
-  \item The testing process starts once development is over. Hence, it has high chances of bugs to be found later in development where they are expensive to fix.
-  \item Waterfall involves large teams. It decreases coordination among team members. While we have only 5 people in the team.
-\end{itemize}
+\section{Delivery approach}
+The delivery approach we choose for our project is \textbf{SCRUM}, an agile method that can provide high flexibility and quick delivery. Our decision is based on the following reasons.
+\begin{enumerate}
+  \item Scrum can provide an incremental delivery system to help the JJFresh online store retain flexibility while continually producing outcomes. As each sprint backlog represents a new release of the product, we can shorten the time for the project to our clients and improve the user experience of the website based on the feedback from them. Clients are continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
+  \item The sprint process in the SCRUM model can provide regular adaptation to changing circumstances. Unlike the Waterfall model, which is very difficult to move back to makes changes in the previous phases, using Scrum would make the development of the JJFresh online store website able to adapt to unforeseen circumstances, allowing for changes to be easily incorporated if required.
+  \item By doing sprint review and sprint retrospective at the end of each sprint, the client and team know exactly what is complete and what is not. This reduces the risk in the development process.
+  \item SCRUM intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with five members. The Waterfall model, which involves large teams and lack of coordination among team members, can not meet our needs.
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Business Value (Financial \& Non-Financial Benefits)}
-%\begin{itemize}
-%  \item JJFresh would gain more users due to the extension of business mode, so Jess and James can get more economic %profits from the increased number of orders delivered by increased users.
-%  \item Customers would be able to buy fruits and vegetables in a more convenient way with quality as good as usual.
-%  \item The suppliers can get more orders from JJFresh, and also get more economic profit.
-%\end{itemize}
-\subsection{Financial benefit}
-For Jess and Jame, online store can save the cost of hiring clerks, management and consumption of water and electricity in physical store, while it can bring the potential considerable income and alleviate the pressure caused by poor sales of the physical store.
+\section{Business Value}
+JJFresh is currently busy in the morning but almost empty in the afternoon. The deployment of this project will keep JJFresh's existing customers who shop in the morning and shift the afternoon business hours from offline to online, which offers delivery service for current and potential customers who cannot go to JJFresh store at that time. The online store will operate 24 / 7, which is much longer compare to the old business hours, thus provides customers with the convenience of placing orders at any time. With these advantages, the online store project would attack more customers for JJFresh. The increase in customers can increase fruit and vegetable orders, and therefore help Jess and James gain more financial benefits and avoid JJFresh from being closed. The financial and Non-Financial benefits for different stakeholders are shown in Table \ref{tab:businessValue}.
 
-For student in the team, they may have the reward after when the project is finished.
-
-For customers, the product of online store often lower than the physical store.
-
-\subsection{Non-financial benefit}
-For Jess and Jame, the risk of establishing the online store is less than physical store. For instance, the cost of establishing and maintaining the website is less than physical store. Compare to physical store, online store can reduce the risk of products spoilage because of cargo backlog. Online store can serve more customers who may live far away from JJFresh. Hence, Jess and James may have more orders than the physical store.
-
-For student in the team, they will obtain their experience in the development of the project. On one hand, the experience of development may attract students toward world of software project development and may help him/her in the career path on it. On the other hand, the experience can improve students' teamwork ability, which is important in the future.
-
-For customers, online store provides the convenient platform to purchase vegetable and fruit. they can consumption product at night without worrying about the dangerous of going to the physical store. Delivery service can not only also saves the time, but send the products to the customers at the special period. For example, government ask people to reduce unnecessary travel because of coronavirus recently, delivery service will help people to get their products safety.
-
-xxxlhk
-
-JJFresh is currently busy in the morning but almost empty in the afternoon. The deployment of this project will keep JJFrsh's peak business hours to retain old customers who shop in the morning, and shift the afternoon business hours from offline to online, which offers delivery service for current and potential customers who cannot go to JJFresh store at that time. The online store will operate 24 / 7 which is much longer compare to the old business hours, thus provides customers with the convenience of placing orders at any time. With these advantages, the online store project would attack more customers for JJFresh. Therefore can increase fruit and vegetable orders, Jess and James can gain financial benifits, and avoid JJFresh from being closed.
-
-The Deployment of the online store website can also increase the chance of JJFresh being searched by a search engine of a browser, which can improve the exposure, thereby improving brand awareness.
-
-If this business mode achieves success, JJFresh can lead other retail stores to transition from offline to online.
+\begin{tabularx}{0.95\linewidth}{%
+  >{\raggedright\arraybackslash}l%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  Stakeholders & Financial benefits & Non-Financial Benefits \\
+  \midrule
+  Jess and James
+  & Jess and James are the business owners of the JJFresh online store project. The success of the project can help them change their business model. They would gain more customers due to the extension of the business model. Also, the increase in customers would increase the number of orders, which can increase their revenue.
+  & They can gain experience in operating an online fruit shop. The online store website can also increase the chance of JJFresh being searched by a search engine of a browser, which can improve the exposure, thereby improving their brand awareness. 
+  \\
+  \midrule
+  The teaching team
+  & The teaching team of the Software Processes and Management subject is employed by the school. They can get salary by guiding students.
+  & Teaching students in this project can increase their experience in teaching and management.
+  \\
+  \midrule
+  The student team
+  & If the project achieves commercial success, students may receive financial awards from Jess and James.
+  & They would gain software development experience from the project, which can increase their project experience and help boost their CV. Also, working as a team can improve their teamwork ability.
+  \\
+  \midrule
+  Customers
+  & For the customers who are used to buy fruits from JJFresh, home delivery can save them time and money. They don't need to spend money on transportation to jjfresh. Of course, the delivery fee must be considered. But it would be a trade-off.
+  & Customers would be able to buy fruits and vegetables with high quality in a more convenient way. Also, for unforeseen circumstances like Covid-19, buying online can reduce their unnecessary travel and keep them safe.
+  \\
+  \bottomrule
+  \\
+  \caption{Business Value}  
+  \label{tab:businessValue}
+\end{tabularx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Constraints}
 \begin{itemize}
-  \item team members lack of experience in agile
-  \item team members are unfamiliar with wix/front end techniques/other techniques?
-  \item wix isn't compatible with other front end languages/frameworks, cannot be customized if needed?
-  \item JJFresh didn't do market analysis, whether this business mode will success is unknown
-  \item time is limited to 1 month
+  \item Team members are lack of experience in SCRUM. SCRUM is an Agile process and is difficult to do without experience, especially an experienced SCRUM master. The student who plays the role of SCRUM master has no SCRUM management experience before. There may be many problems during the development process.
+  \item People in the development team are unfamiliar with creating a website in Wix.com. Also, students who are responsible for the implementation of the project are not full-time workers. The efficiency of their development may be low, which may result in the delay of the project.
+  \item A virtual team may not able to follow all the processes in SCRUM. Appropriate improvements and compromises would be applied to some specific processes in the SCRUM. Communication in a virtual team is less frequent and less rich than face-to-face interaction. Some of the team members are not in Australia, and because of the time difference, daily SCRUM will be conducted via chat, which may bring negative effects to the project.
+  \item The tool provided by Wix.com only has limited functions, which make it impossible to achieve the requirements perfectly. And the website implement by Wix.com has poor scalability. If Jess and James want to expand their business scale, the development team may have to redevelop the entire project with other web technics.
+  \item The delivery range of Jess and James is limited, and users who are too far away cannot get services.
+  \item The time limit of the project is only about one month. The overall implementation of the project may not be perfect in such a short time.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -514,7 +558,7 @@ SP_{total} = 60 \text{ (Story Point)}
 $$
 
 \subsection{Velocity Estimating}
-There are two developers in our team. Since both of them are students, each of them can only spend about 1.2 to 1.5 hours a day on the project. They can work five days a week, so the total working hours of a week are 12 to 15 hours. We expect each story point to be equivalent to one hour of working time. So the min velocity ($V_{min}$) for a two-week sprint is about 24 story points, and the max velocity ($V_{max}$) is about 30 story points. And by using the formula shown below, we can get our minimum and maximum number of sprints, which are 2 and 2.5, respectively. The inital burndown chart is shown on figure \ref{fig:burndown1}.
+There are two developers in our team. Since both of them are students, each of them can only spend about 1.2 to 1.5 hours a day on the project. They can work five days a week, so the total working hours of a week are 12 to 15 hours. We expect each story point to be equivalent to one hour of working time. So the min velocity ($V_{min}$) for a two-week sprint is about 24 story points, and the max velocity ($V_{max}$) is about 30 story points. And by using the formula shown below, we can get our minimum and maximum number of sprints, which are 2 and 2.5, respectively. The inital burndown chart for the whole project is shown on figure \ref{fig:burndown1}.
 $$
 S_{min} = \frac{SP_{total}}{V_{max}}
 \text{, } 
@@ -523,7 +567,7 @@ $$
 \begin{figure}[htp]
 \centering
 \includegraphics[width=\textwidth]{Figures/burndown1.pdf}
-\caption{Initial Burndown Chart}
+\caption{Initial Burndown Chart for the Whole Project}
 \label{fig:burndown1}
 \end{figure}
 
