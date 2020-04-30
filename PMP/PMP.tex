@@ -150,44 +150,43 @@ Jess and James plans to create an online store of fruits and vegetables as a JJF
 \section{Scope}
 \subsection{What is in-scope?}
 \begin{enumerate}
-  \item Login system: User need to register an account with personal information (name, phone number, email, address etc.) when the first-time use. They can login to the online store website after registration by inputting their username and password.
+  \item \textbf{Login system}: Users need to register an account with personal information for the first time. They should be able to log in with an email address and a password. After log in to the online store website, they are able to manage their orders. The owners of JJFresh should have an admin account to manage all the orders. Both customer account and admin account would be accessible from a single URL.
   
-  High priority: Online store website is not for browsing information, it is the platform for trading fruits and vegetables. Every user will purchase products through their account, which is the basic function of this online store website.
+  \textit{High priority}: An online store website is not only for browsing information but also a platform for trading fruits and vegetables. Without a Login system, either the customers or Jess and James can manage their orders.
 
-  \item Management of personal information: User can add or edit their personal information. For example, if they change their phone number or move to the new house, updating the personal information will be the necessary.
+  \item \textbf{Management of personal information}: Users should be able to add or edit their personal information. The name, home address, and upon three multiple contact phone numbers are included in the personal information.
   
-  High priority: If the customers change their phone number or address, this function is important to avoid some trouble caused by information asymmetry. For example, Jess and James may delivery products to the wrong address and cannot contact buyer.
+  \textit{High priority}: If the customers change their phone number or address, this function is important to avoid some trouble caused by outdated information. Without this feature, Jess and James may deliver products to the wrong address and cannot contact the buyer.
   
-  \item Commodity display system: Website should display all type of the products with different size and price to the users whenever they are going to purchase or just browse it.
+  \item \textbf{Products display system}: The website should be able to display different types of products with different sizes and prices to the users. At least three different types of produce boxes with three different sizes would be provided.
   
-  High priority: User should know which products are sold in this online store and its size and price. Purchase cannot be made without this function because customers do not even know which fruit and vegetable they can buy.
+  \textit{High priority}: Users should be able to know what products they can buy in the online store. The prices of the products should be shown based on the types, sizes, and the number of products selected by customers.
   
-  \item Order processing system: User can place their orders after selecting what they want. They can also change or cancel their orders. Jess and James can management these orders in the website background.
+  \item \textbf{Order management system}: Users should be able to place their orders after selecting what they want. When the booking is final, a confirmation email containing information about the date, time, type, and size of the box would be sent to the customer. If customers want to modify an existing order, they have to cancel and recreate it. Jess and James should be able to manage these orders on the website.
   
-  High priority: It is the basic part of the purchase function. Online store cannot do any business without orders.
+  \textit{High priority}: It is the basic part of the purchase function. An online store cannot do any business without an order management system.
   
-  \item Message confirmation function: After placing the orders, Jess and James will deal with the orders. If the orders are confirmed, a message will be sent to the users to let they know their orders are confirmed.
+  \item \textbf{Database system} A database system that can store information about users, products, and orders is required.
   
-  High priority: Confirmation system is the important part in the business online. If the customers place the order while the store owner ignore it, they will never know whether their orders are confirmed or not without confirmation message system.
+  \textit{High priority}: An online store is a type of software products that need a database system to store more and more data.
   
-  \item A database which can store user account, order list, product information.
+  \item \textbf{Date selecting system}: In this project, the customer should be able to choose a day and time for delivery. Delivery options are in hour blocks. Only two bookings are allowed in a particular hour. Bookings should be available for the next seven days only.
   
-  High priority: Online store is a type of software products which need database to store more and more data.
-  
-  \item Date selecting function: In this project, customer should be able to choose a day and time for delivery.
-  
-  High priority: Because JJFresh online store offer delivery service, the date selecting system is the important part of delivery.
+  \textit{High priority}: Because JJFresh online store offers delivery service, a date selection system is required to avoid date conflict and  feasible delivery solutions.
 \end{enumerate}
 \subsection{What is out-of-scope?}
-The future enhancements are out-of-scope
+The features in the future enhancements are out-of-scope:
 \begin{enumerate}
-  \item Online payment system.
-  \item Navigation system on delivery.
+  \item An online payment system is not included in the initial development of the project. The physical delivery details need to be considered by Jess and James. 
+  \item No AI solution would be provided to help improve the delivery process. 
+  \item Adding multiple bookings for the same time slot is not currently allowed. Only two bookings are allowed in a particular hour.
 \end{enumerate}
-The following are more out-of-scope
+
+Also, the features below are out-of-scope:
 \begin{enumerate}
-  \item Distance judgment function. Jess and James should determine the distance between courier destination and JJFresh within 10km by themselves.
-  \item Communication service with customers except confirmation message sending. Jess and James decide how to communicate with their users when necessary, such as call or email to him/her.
+  \item No navigation system on delivery is included. The system will not verify the authenticity of the address. Jess and James have to find their way to their customers' addresses themselves.
+  \item No delivery distance calculate function would be provided. The system will not judge whether the address is too far, so Jess and James have to decide whether they would deliver to an address or not. 
+  \item Communication service with customers except confirmation message sending is not included. Jess and James have to decide how to communicate with their customers themselves.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Delivery approach}
@@ -286,6 +285,11 @@ According to the scrum development cycle and the difficulty of this project deve
 
 \section{Risk Management}
 \subsection{Risk Impact Analysis Table}
+We follow the following scoring rules to assess the impact of each risk:
+\textit{(1) no impact; (2) minimal impact; (3) moderate impact; (4) severe impact; and (5) catastrophic impact; }
+
+The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
+
 \begin{tabularx}{0.95\linewidth}{%
   >{\raggedright\arraybackslash}p{1cm}%
   l%
