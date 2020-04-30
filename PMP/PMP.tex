@@ -87,24 +87,24 @@ Jess and James plans to create an online store of fruits and vegetables as a JJF
   & Yicun Tian, Hongkang Li, Pin Wang, Chongjing Zhang, Zhangfeng Qiu
   & 4.27
   & In this version, five people of the team cooperated to complete section 1 to 6 of the Project Management Plan. In this process, we mainly carried out the preparation work before development, including the definition of key stakeholders, Scope and SDLC of the project, evaluation of business value, constraints, the definition of people's role in the team, communication plan, risk management, definition of the technology used in the project and project planning.
-  \\
-  \hline
-  Version 1.1
-  & 5.23
-  & 
-  & 
-  \\
-  \midrule
-  Version 1.2
-  & 5.30
-  & 
-  &
-  \\
-  \midrule
-  Version 1.3
-  & 6.5
-  & 
-  & 
+  % \\
+  % \midrule
+  % Version 1.1
+  % & 
+  % & 5.23
+  % & 
+  % \\
+  % \midrule
+  % Version 1.2
+  % &
+  % & 5.30
+  % &
+  % \\
+  % \midrule
+  % Version 1.3
+  % & 
+  % & 6.5
+  % & 
   \\
   \bottomrule
   \\
@@ -112,15 +112,40 @@ Jess and James plans to create an online store of fruits and vegetables as a JJF
   \label{tab:evolutionOfDocument}
 \end{tabularx}
 
-\chapter{Project Information}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Project Information}
 \section{Key Stakeholders}
-\begin{enumerate}
-  \item Jess and James: they are product owner who define the features, contents of this project, JJFresh online store website, and responsible for the benefits of it.
-  \item Team: In this project, a group of students will come to develop it under the employment of the product owner. The project cannot be developed if there no people come to implement it.
-  \item Customer: Consumption by customers is the whole of the business in this project. Customers will purchase fruit and vegetable on Online store, and the consumption is the majority of the income of JJFresh.
-\end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabularx}{0.95\linewidth}{%
+  >{\raggedright\arraybackslash}l%
+  >{\raggedright\arraybackslash}p{1.5cm}%
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  Stakeholders & Internal/ External & Influence on Project \\
+  \midrule
+  Jess and James
+  & Internal
+  & Jess and James are the people who defined the requirements of the project. They will not directly participate in the development of the online store website. They are users of the website and can provide feedback to the development team during the development process.
+  \\
+  \midrule
+  The teaching team
+  & Internal
+  & The teaching team of SWEN90016 is playing the role of Product Owner in the project. They are responsible for contact with Jess and James and understand their need.  They cooperate with the SCRUM master of the project and help define the product backlog. Also, they give advice and feedback to the student team during the development process.
+  \\
+  \midrule
+  The student team
+  & Internal
+  & The student team cooperates as a SCRUM team in the project. They are responsible for both planning and developing the online store project. 
+  \\
+  \midrule
+  Customers
+  & External
+  & The satisfaction of the customers is an important factor for project success. The main source of website revenue comes from them. Their feedback can help the development team improve the application.
+  \\
+  \bottomrule
+  \\
+  \caption{Stakeholder Register}  
+  \label{tab:stakeholderRegister}
+\end{tabularx}
 
 \section{Scope}
 \subsection{What is in-scope?}
@@ -160,33 +185,14 @@ The future enhancements are out-of-scope
   \item Navigation system on delivery.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Delivery approach / SDLC - Agile}
-LHK
-
-Agile Scrum is the popular model that be used for website project.
-
-This project is developed through a student group. Agile Scrum team are typically 6-9 people, without any traditional software engineers, and the team members work together to complete the set of work they have collectively committed to complete within a sprint (1). Compared to the other models, for instance, Incremental SDLC requires more resources and management attention, but the group members are students who need to spend more time on other subjects and cannot obtain enough resources like the professional software engineer.
-
-This project is the online store website which greatly affected by market change and there is may be some change after the process in the underway. For example, product selection in the project maybe add more size of box or more type of box because of the market change during the development. Waterfall SDLC is difficult to accommodate these changes in the development, while Agile Scrum can adapt regular in the changing circumstances.
-
-It is necessary to release the website as soon as possible to promote the online store. The first version can have only the product list and the introduction of online store to attract customers. When the final build online, JJFresh will have many customers who cannot wait to try its products. Agile Scrum can satisfy this point. In the development of this project, Agile Scrum can deliver many versions of project, and face to meet the increasing customer demands and needs. Compare to the Incremental Model, both of them delivery many build.
-
-We choose to use Agile SDLC out of Formal, Agile and Hybrid, because we prefer the following advantages of agile compares to the limitations of a formal model such as waterfall.
-
-Advantages of the Agile Model:
-\begin{itemize}
-  \item It is focused client process. So, it makes sure that the client is continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
-  \item Agile teams are extremely motivated and self-organized so it likely to provide a better result from the development projects.
-  \item Agile software development method assures that quality of the development is maintained
-  \item The process is completely based on the incremental progress. Therefore, the client and team know exactly what is complete and what is not. This reduces risk in the development process.
-  \item Agile intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with 5 members.
-\end{itemize}
-Limitations of Waterfall Model:
-\begin{itemize}
-  \item Very difficult to move back to makes changes in the previous phases. It's unknown whether the client will change their requirements.
-  \item The testing process starts once development is over. Hence, it has high chances of bugs to be found later in development where they are expensive to fix.
-  \item Waterfall involves large teams. It decreases coordination among team members. While we have only 5 people in the team.
-\end{itemize}
+\section{Delivery approach}
+The delivery approach we choose for our project is \textbf{SCRUM}, an agile method that can provide high flexibility and quick delivery. Our decision is based on the following reasons.
+\begin{enumerate}
+  \item Scrum can provide an incremental delivery system to help the JJFresh online store retain flexibility while continually producing outcomes. As each sprint backlog represents a new release of the product, we can shorten the time for the project to our clients and improve the user experience of the website based on the feedback from them. Clients are continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
+  \item The sprint process in the SCRUM model can provide regular adaptation to changing circumstances. Unlike the Waterfall model, which is very difficult to move back to makes changes in the previous phases, using Scrum would make the development of the JJFresh online store website able to adapt to unforeseen circumstances, allowing for changes to be easily incorporated if required.
+  \item By doing sprint review and sprint retrospective at the end of each sprint, the client and team know exactly what is complete and what is not. This reduces the risk in the development process.
+  \item SCRUM intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with five members. The Waterfall model, which involves large teams and lack of coordination among team members, can not meet our needs.
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Business Value (Financial \& Non-Financial Benefits)}
 %\begin{itemize}
@@ -195,6 +201,9 @@ Limitations of Waterfall Model:
 %  \item The suppliers can get more orders from JJFresh, and also get more economic profit.
 %\end{itemize}
 \subsection{Financial benefit}
+
+
+
 For Jess and Jame, online store can save the cost of hiring clerks, management and consumption of water and electricity in physical store, while it can bring the potential considerable income and alleviate the pressure caused by poor sales of the physical store.
 
 For student in the team, they may have the reward after when the project is finished.
@@ -207,8 +216,6 @@ For Jess and Jame, the risk of establishing the online store is less than physic
 For student in the team, they will obtain their experience in the development of the project. On one hand, the experience of development may attract students toward world of software project development and may help him/her in the career path on it. On the other hand, the experience can improve students' teamwork ability, which is important in the future.
 
 For customers, online store provides the convenient platform to purchase vegetable and fruit. they can consumption product at night without worrying about the dangerous of going to the physical store. Delivery service can not only also saves the time, but send the products to the customers at the special period. For example, government ask people to reduce unnecessary travel because of coronavirus recently, delivery service will help people to get their products safety.
-
-xxxlhk
 
 JJFresh is currently busy in the morning but almost empty in the afternoon. The deployment of this project will keep JJFrsh's peak business hours to retain old customers who shop in the morning, and shift the afternoon business hours from offline to online, which offers delivery service for current and potential customers who cannot go to JJFresh store at that time. The online store will operate 24 / 7 which is much longer compare to the old business hours, thus provides customers with the convenience of placing orders at any time. With these advantages, the online store project would attack more customers for JJFresh. Therefore can increase fruit and vegetable orders, Jess and James can gain financial benifits, and avoid JJFresh from being closed.
 
@@ -241,7 +248,7 @@ If this business mode achieves success, JJFresh can lead other retail stores to 
   \\
   \midrule
   Product Owner
-  & Yicun Tian, Hongkang Li, Jess and James
+  & Jess and James, Tutors
   & The product owner is the spokesperson for the customer or stakeholders. Their main responsibility is to ensure that product to-do items are transparent and clearly expressed, and everyone in the team has the same understanding of the project.
   \\
   \midrule
@@ -251,8 +258,8 @@ If this business mode achieves success, JJFresh can lead other retail stores to 
   \\
   \midrule
   Subject Matter Expert
-  & Tutor
-  & 
+  & Tutors, Tian Yicun, Li Hongkang
+  & Somebody with specialized knowledge or talent that is needed by the Team
   \\
   \bottomrule
   \\
@@ -289,8 +296,8 @@ According to the scrum development cycle and the difficulty of this project deve
   & Business
   & Jess and James cannot deliver in time due to unforeseen circumstances.
   &
-  & If Jess and James cannot deliver the order because of the coronavirus, the economic loss is relatively small. However, if the order information is too large, but the manpower is insufficient, the order cannot be delivered or the delivery is not timely, which will cause the customer to refund the order and bring them huge economic losses. Even they may lose customer expectations and trust.
-  & Because of the current coronavirus, when the condition is serious, Jess and James cannot deliver the product to the door. Considering that only two people, Jess and James, are currently packaging and distributing all orders, when there is too much order information or one of them is sick, it is impossible to deliver fruits and vegetables.
+  & If Jess and James cannot deliver the order because of the coronavirus, the economic loss is relatively small.Because the number of orders during the coronavirus will also decrease. However, if one of them is sick and the manpower is insufficient, the order cannot be delivered or the delivery is not timely, which will cause the customer to refund the order and bring them huge economic losses. Even they may lose customer expectations and trust.
+  & Because of the current coronavirus, when the condition is serious, Jess and James cannot deliver the product to the door. Considering that only two people, Jess and James, are currently packaging and distributing all orders, when one of them is sick, it is impossible to deliver fruits and vegetables.
   \\
   \midrule
   3
@@ -305,7 +312,7 @@ According to the scrum development cycle and the difficulty of this project deve
   & Business
   & Buyer declares that there is a problem with the quality of the product received.
   &
-  & The buyer believes that the fruit or vegetable received is not fresh, or the size, softness and hardness do not meet expectations, resulting in a refund and economic loss to the buyer.
+  & The buyer believes that the fruit or vegetable received is not fresh, or the size, softness do not meet expectations, resulting in a refund and economic loss to the buyer.
   & Because the buyer buys the product according to the pictures and descriptions on the website and does not see the real thing. However, if the seller uploads a virtual picture or picks the best of vegetables and fruits to take a picture, it will result in inconsistency between the items received by the buyer and the picture. As a result, buyers do not recognize the product quality and refund the order.
   \\
   \midrule
@@ -343,10 +350,10 @@ According to the scrum development cycle and the difficulty of this project deve
   \\
   \midrule
   2
-  & Order volume is too large or the impact of coronavirus
+  & The seller is sick or the coronavirus is serious
   & Jess and James
-  & If the coronavirus should affect the delivery, the buyer needs to cancel the order. If the order cannot be delivered in time due to excessive orders, you can hire another person to deliver. 
-  & Mitigate
+  & If the coronavirus should affect the delivery, the buyer needs to cancel the order. If the order cannot be delivered in time because the seller is sick or other assents, they can hire another person to deliver. 
+  & Mitigate/accept
   & 
   \\
   \midrule
@@ -368,7 +375,7 @@ According to the scrum development cycle and the difficulty of this project deve
   \midrule
   5
   & User cannot receive mail
-  & user or developers
+  & users or developers
   & If this risk occurs due to network extension, the system should be able to automatically detect the user's network conditions and promptly prompt. For example, when the buyer's network conditions are poor, the system should prompt the user that the operation may not be successful when the user submits the order or cancels the order. If the email is not received in time, please contact the seller to check whether the operation is successful. If there is a problem with the function of auto-replying emails, the administrator of the maintenance system should be able to detect it in the background, the system is abnormal, and fix the bug in time.
   & Mitigate
   &
@@ -543,18 +550,24 @@ Except for the tree future user stories at the end of the product backlog table,
 \end{tabularx}  
 
 \subsection{Must-have Story Points}
-Without calculating the features needed in the future, the total number of must-have story points is 57.
+Without calculating the features needed in the future, the total number of must-have story points is 60.
 $$
-SP_{total} = 57 \text{ (Story Point)}
+SP_{total} = 60 \text{ (Story Point)}
 $$
 
 \subsection{Velocity Estimating}
-There are two developers in our team. Since both of them are students, each of them can only spend about 1.2 to 1.5 hours a day on the project. They can work five days a week, so the total working hours of a week are 12 to 15 hours. We expect each story point to be equivalent to one hour of working time. So the min velocity ($V_{min}$) for a two-week sprint is about 24 story points, and the max velocity ($V_{max}$) is about 30 story points. And by using the formula shown below, we can get our minimum and maximum number of sprints, which are 2 and 2.5, respectively.
+There are two developers in our team. Since both of them are students, each of them can only spend about 1.2 to 1.5 hours a day on the project. They can work five days a week, so the total working hours of a week are 12 to 15 hours. We expect each story point to be equivalent to one hour of working time. So the min velocity ($V_{min}$) for a two-week sprint is about 24 story points, and the max velocity ($V_{max}$) is about 30 story points. And by using the formula shown below, we can get our minimum and maximum number of sprints, which are 2 and 2.5, respectively. The inital burndown chart for the whole project is shown on figure \ref{fig:burndown1}.
 $$
 S_{min} = \frac{SP_{total}}{V_{max}}
 \text{, } 
 S_{max} = \frac{SP_{total}}{V_{min}}
 $$
+\begin{figure}[htp]
+\centering
+\includegraphics[width=\textwidth]{Figures/burndown1.pdf}
+\caption{Initial Burndown Chart for the Whole Project}
+\label{fig:burndown1}
+\end{figure}
 
 \subsection{Sprint Planning}
 \subsubsection{Sprint Cycle}
@@ -564,7 +577,7 @@ The development phase of our project would start on \textbf{Monday, April 25}. S
 The first phase is to let the website go online without the function of purchase. The website can display all kinds of information about the products and provide the service of user registration. At the same time, the database is initially established to record the data of users and products. The first sprint will last for two weeks, \textbf{from Monday, April 27 to Friday, May 8}. 
 
 
-In the second phase, we need to realize the function that users place orders to purchase products, and sellers can view and modify user orders. Preliminary testing will also take place at this phase. The second sprint will last for two weeks, \textbf{from Monday, May 11 to Friday, may 22}.
+In the second phase, we need to realize the function that users place orders to purchase products, and sellers can view and modify user orders. Preliminary testing will also take place at this phase. The second sprint will last for two weeks, \textbf{from Monday, May 11 to Friday, May 22}.
 
 The third stage is mainly based on user feedback to repair the vulnerability, carry out more tests and improve the existing functions. If some functions left over from the first two sprints are not implemented, they will also be solved in this sprint. As the project is nearing its end and there is less work left, the sprint in this phase will last only one week, \textbf{from Monday, May 25 to Friday, May 29.}
 
@@ -631,7 +644,6 @@ As mention in section \ref{sec:sprintCycle}, the main goal of the first sprint i
   \caption{The first Sprint Backlog (4.27 - 5.8)}  
   \label{tab:firstSprintBacklog}
 \end{tabularx}
-\clearpage
 
 Trello is used as the PMP board to help us manage our SCRUM process. After the first sprint planning, the PMP board of our project is shown in Figure \ref{fig:firstSprintPmpBoard}. The label of the card is about the value point of the feature. The Story point of the feature is shown in the upper right corner of the card.
 
