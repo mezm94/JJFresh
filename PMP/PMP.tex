@@ -393,6 +393,142 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
 \end{tabularx}
 
 \section{Technology}
+The following are some technologies we researched for web development.
+\begin{tabularx}{0.95\linewidth}{%l%
+  >{\raggedright\arraybackslash}p{1.4cm}%
+  >{\raggedright\arraybackslash}p{1.8cm}%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}p{2.7cm}}
+  \toprule
+  Name & Responsibility & Description & Pros & Cons \\
+  \midrule
+  HTML
+  & Front end language
+  & Hypertext markup language (HTML) is a standard markup language designed for documents to be displayed in web browsers and describes the structure of web pages.
+  \\
+  \midrule
+  CSS
+  & Front end language
+  & Cascading Style Sheets is a style sheet language that describes the presentation of documents written in markup languages such as HTML.
+  \\
+  \midrule
+  JavaScript
+  & Front end language
+  & JavaScript is a high-level, often just-in-time, multi-paradigm programming language that supports interactive web pages. It is an important part of web applications.
+  \\
+  \midrule
+  Bootstrap
+  & Front end framework
+  & Bootstrap is a front-end framework that includes HTML and CSS based design templates and JavaScript plugins. It allows users to create responsive designs easily.
+  & Easy to use and saves time; 
+    Compatible with all browsers; 
+    Responsive structures and styles;
+  & Load time can be slow, file size can be huge; 
+   All websites using Bootstrap look the same with out style customization;
+  \\
+  \midrule
+  Foundation
+  & Front end framework
+  & Foundation is a front-end framework that is a collection of HTML, CSS and JS. It is a easy-to-use, powerful, and flexible framework for building web applications on any device.
+  &  Fast development;  Adapt to all devices; Robust grid system;
+  &  Community support is worse compare to Bootstrap; Need time to learn for beginners;
+  \\
+  \midrule
+  Angular
+  & Front end framework (JS)
+  & Angular is a development platform for building web applications using TypeScript.
+  & Component-based architecture allows reuse of components of UI, which is easy for writing tests; High performance; Fast development;
+  & Difficult to manage components; Need time to learn for beginners; Lacks CLI documentation;
+  \\
+  \midrule
+  React.js
+  & Front end framework (JS)
+  & React is a JavaScript library for building user interfaces. It can be used as the basis for developing web pages and mobile applications.
+  & Components are modularized; Stable; Compatible with all browsers; Fast development;
+  & Longer learning time than Angular; Lack of documentation; Less straightforward than pure JavaScript;
+  \\
+  \midrule
+  Vue.js
+  & Front end framework (JS)
+  & Vue.js is an progressive, incrementally adoptable MVVM JavaScript framework for building user interfaces and single-page applications.
+  & Clear documentation, simple to study; Small and fast; Components are modularized;
+  & Too flexible that the codes are irregular; New framework, not very mature, has a smaller community;
+  \\
+  \midrule
+  Java
+  & Back end programming language
+  & Java is a programming language that is class-based, object-oriented, and concurrent.
+  & High-level language with simple syntax; Object-oriented programming allows reuse of codes; Supports multi-threading and distributed computing; Compatible for all platforms;
+  & Slower than natively compiled languages; Less compact;
+  \\
+  \midrule
+  PHP
+  & Back end programming language
+  & PHP is a server scripting language and a powerful tool for web development. It is fast, flexible and pragmatic that makes it easier to make dynamic and interactive web pages.
+  & Compatible for all platforms; Easily embedded into HTML; High scalability; Large community;
+  & Slower than other languages; Flexibility allows bad code;
+  \\
+  \midrule
+  Python
+  & Back end programming language
+  & Python is an interpreted, high-level, general-purpose programming languages.
+  & Easy to use and read; Multi-paradigm approach; Flexible;
+  & Slower than natively compiled languages; Doesn't allow multi-threading;
+  \\
+  \midrule
+  Django
+  & Back end framework (Python)
+  & Django is a Python-based high-level web framework follows MTV architectural pattern. It encourages rapid development and clean, pragmatic design.
+  & Fast processing and developing; Scalable and flexible;
+  & Not for smaller projects; Monolithic;
+  \\
+  \midrule
+  Spring MVC
+  & Back end framework (Java)
+  & Spring MVC is a Java-based web framework that implements all the basic features of a core Spring framework like Inversion of Control and Dependency Injection.
+  & Highly scalable and flexible; Use of modularity thus easy for testing; Large community;
+  & Too complex, need time to learn for beginners; No clear guidelines;
+  \\
+  \midrule
+  Express.js
+  & Back end framework (Node.js)
+  & Express is a minimal and flexible Node.js web application framework that provides a robust set of features for building web applications and APIs.
+  & Fast development; Same language can be used to code front end; Simple; Flexible
+  & Not for heavy projects;
+  \\
+  \midrule
+  WIX
+  & Web development platform
+  & Wix is a popular cloud-based website builder. It provides an easy-to-use combination of powerful features that make it easy to build websites.
+  & Flexible; Provides an app market; Easy to use; Massive template collection;
+  & Loading is slow; Templates cannot be changed easily; Site cannot be transferred;
+  \\
+  \midrule
+  Weebly
+  & Web development platform
+  & Weebly is a simple site builder with templates for great design. It allows the user to edit a website without any coding skills.
+  & Massive template collection; Built-in support for e-commerce; Easy to use; Flexible;
+  & Cannot add functionality not provided;
+  \\
+  \midrule
+  WordPress
+  & Web development platform
+  & WordPress is a free and open source website builder. 
+  & Powerful features; Scalability; Easy to use; Massive themes; A lot of free plugins;
+  & Loading can be slow; Need to keep website updated; Doesn't support drag and drop;
+  \\
+  \bottomrule
+  \\
+  \caption{Available Web Development Technologies}  
+  \label{tab:availableWebDevelopmentTechnologies}
+\end{tabularx}
+Among all technologies we researched above, we choose to use Wix content management system to build the website. Wix requires no coding skills or other usage of frameworks. It supports drag and drop to build web pages and provides a user-friendly UI to set the style of web components that integrates HTML and CSS from codes into user interfaces. And Wix also provides user-friendly UI to react to user actions with event handlers, this supports visualization of JavaScript. So far, Wix substitutes all front end languages or frameworks coding with user interfaces without any code. And Wix conceals the back end code in encapsulated apps, but also let users to implement customized logic using Node.js. Nonetheless, Wix offers a database operated by itself which also supports changes through graphical user interface. This database maintains the consistency of the usage of Wix platform, without extra database construction.
+
+Compare to other website builders, Wix is more flexibly as it supports usage of Node.js to write customized backend code and take action when doing processes. And it already provides ready-made modules including online shop, user login, user permission management, and check out with credit card which can be used in developing the JJFresh website.
+
+By using Wix, we will save time of building and integrating the frameworks and adjusting the component properties with the help of visible user interface.And since we don't have much experience in web development, Wix's characteristic that it requires as least coding as possible is suitable us, and can help us focus on project management instead of catching up with the technology stacks. Therefore, we decided to use Wix to develop the website.
+
 \section{Project Planning}
 The SDLC of our project is SCRUM. Since the key requirements for the initial development provided by Jess and James are fixed, a Fixed-Scope Release Planning would be used to plan our project.
 
