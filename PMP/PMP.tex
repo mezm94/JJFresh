@@ -246,6 +246,7 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
 \end{tabularx}
 
 \section{Constraints}
+\label{sec:constraints}
 \begin{itemize}
   \item Team members are lack of experience in Scrum. Scrum is an Agile process and is difficult to do without experience, especially an experienced Scrum master. The student who plays the role of Scrum master has no Scrum management experience before. There may be many problems during the development process.
   \item People in the development team are unfamiliar with creating a website in Wix.com. Also, students who are responsible for the implementation of the project are not full-time workers. The efficiency of their development may be low, which may result in the delay of the project.
@@ -297,26 +298,89 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
   \label{tab:rolesResponsibilities}
 \end{tabularx}
 
+\clearpage
 \section{Communication Plan}
 \label{sec:communicationPlan}
-Our group first uses “slack” for the main information transfer, such as publishing message notifications, file sharing, etc. Secondly, using “trello” to arrange the various stages of the project plan and the content is managed by the Scrum master. Furthermore, “github” is used to manage output products, such as the release of code and report.
+Firstly, as a virtual team, we mainly use \textit{Slack} and \textit{Zoom} for information transfer, such as publishing message notifications, file sharing, etc. 
 
-According to the Scrum development cycle and the difficulty of this project development, we will conduct a 15-minute meeting discussion on zoom every day, mainly to summarize the results of yesterday and the arrangement of today's tasks. If a team member is absent from a meeting, the person in charge will use email or telephone to communicate with him.
+Secondly, we use \textit{Trello} to help manage our Agile Board. Both the Project Backlog and the Sprint Backlog are managed on the Agile Board.
 
-\clearpage
+Furthermore, \textit{Github} is used to help enhance our teamwork and to manage our outcomes, such as the release of code and report.
+
+According to the constraints of running a virtual team (Section \ref{sec:constraints}), we adjusted some of the communication processes in Scrum, and our communications matrix is shown in table \ref{tab:communicationMatrix}. 
+\\
+
+\begin{tabularx}{\linewidth}{%
+  >{\raggedright\arraybackslash}p{1.5cm}%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}p{1.1cm}%
+  >{\raggedright\arraybackslash}p{1.5cm}%
+  >{\raggedright\arraybackslash}p{1.1cm}%
+  >{\raggedright\arraybackslash}l}
+  \toprule
+  Processes & Stakeholder & Communication Objective & Format & Frequency & Owner & Importance
+  \\
+  \midrule
+  Project Planning Meeting
+  & Scrum Master, Product Owner, Development team, Subject Matter Expert
+  & Provide definition of the product backlog and provide a project plan for the whole project.
+  & Virtual Meeting - \textit{Zoom}; Formal Report
+  & Weekly before the first sprint
+  & Scrum master
+  & High
+  \\
+  \midrule
+  Sprint Planning Meeting
+  & Scrum Master, Product Owner
+  & Provide Sprint Backlog, which selects high priority items from the Product Backlog that the Development Team can commit to delivering in a single Sprint.
+  & Virtual Meeting - \textit{Zoom}
+  & At the beginning of each sprint
+  & Scrum master
+  & High
+  \\
+  \midrule
+  Daily Scrum
+  & Scrum Master, Product Owner, Development team
+  & A short meeting used to start a day's work
+  & Chat in the \textit{daily-scrum} channel of \textit{Slack}
+  & Daily
+  & Scrum master
+  & Medium
+  \\
+  \midrule
+  Sprint Review
+  & Scrum Master, Business Owner, Product Owner, Development team
+  & Show the demo of new features to Stakeholoders and get feedbacks from them.
+  & Virtual Meeting - \textit{Zoom}
+  & At the end of each sprint
+  & Scrum master
+  & Medium
+  \\
+  \midrule
+  Sprint Retrospective
+  & Scrum Master, Business Owner, Product Owner, Development team
+  & An examination of what went well, what could be improved, etc. To make each Sprint more efficient and effective than the last.
+  & Virtual Meeting - \textit{Zoom}
+  & At the end of each sprint
+  & Scrum master
+  & Medium
+  \\
+  \bottomrule
+  \\
+  \caption{Communication Matrix}  
+  \label{tab:communicationMatrix}
+\end{tabularx}
+
 \section{Risk Management}
 \label{sec:riskManagement}
-
-
 \subsection{Risk Impact Analysis Table}
 We follow the following scoring rules to assess the impact of each risk:
-\textit{(1) no impact; (2) minimal impact; (3) moderate impact; (4) severe impact; and (5) catastrophic impact; }
-
-The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
+\textit{(1) no impact; (2) minimal impact; (3) moderate impact; (4) severe impact; and (5) catastrophic impact;} The Risk Impact Analysis Table is shown in Table \ref{tab:riskImpactAnalysisTable}.
 
 \begin{tabularx}{0.95\linewidth}{%
   >{\raggedright\arraybackslash}p{1cm}%
-  l%
+  >{\raggedright\arraybackslash}p{1.2cm}%
   >{\raggedright\arraybackslash}p{2cm}%
   ll%
   >{\raggedright\arraybackslash}X}
@@ -324,35 +388,35 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
   Risk ID & Risk Type & Description & Probability & Impact & Justification\\
   \midrule
   1
-  & Project
-  & The software developed by wix has low scalability.
-  & 70%
+  & Product
+  & Design problem - The software developed by Wix has low scalability and is untransferable.
+  & 30\%
   & 4
-  & After the development team chose wix, although wix itself can quickly implement some basic functions, it may not be convenient to implement the extended functions of Jess and James later. For example, when they later want buyers to pay online, they may not be able to use Wix directly. Failure to meet all user needs will result in the failure of the project's later expansion functions.
+  & Although Wix can help quickly implement some basic functions, it may not be suitable for implementing the future enhancement of the project. Also, there are many restrictions on creating a website on Wix. The site created by Wix is not transferrable.
   \\
   \midrule
   2
   & Business
-  & Jess and James cannot deliver in time due to unforeseen circumstances.
-  & 55%
-  & 3
-  & If Jess and James cannot deliver the order because of the coronavirus, the economic loss is relatively small. Because the number of orders during the coronavirus will also decrease. However, if one of them is sick and the manpower is insufficient, the order cannot be delivered or the delivery is not timely   Because of the current coronavirus, when the condition is serious, Jess and James cannot deliver the product to the door，but the economic loss is relatively small. Considering that only two people, Jess and James, are currently packaging and distributing all orders, when one of them is sick, it is impossible to deliver fruits and vegetables, which will cause the customer to refund the order and bring them huge economic losses. Even they may lose customer expectations and trust.
+  & Cancel orders maliciously or for no reason.
+  & 3\%
+  & 5
+  & Malicious orders may cause unnecessary waste.  Some malicious buyers may intentionally create many orders and cancel them on the day of delivery. This kind of malicious actions may negatively affect the operation of the website and cause unnecessary loss. 
   \\
   \midrule
   3
   & Business
-  & Cancel orders maliciously or for no reason.
-  & 30%
-  & 4
-  & The buyer may cancel the order for many reasons, but the consequences of this risk need to be borne by the buyer. For example, the buyer may cancel the order because the amount of vegetables and fruits is too large, but it is no longer needed or it is considered more cost-effective. These actions will lead to the occurrence of this risk. The user can cancel the order on the day of product delivery or cancel the agreed order after the seller purchases the goods. These cancellations are unreasonable or caused by the buyer ’s own reasons, but these actions will cause the seller to accumulate vegetables and fruits and waste time and human resources.
+  & Email system or network system may fail.
+  & 5\%
+  & 2
+  & If the email system or network system failed, the buyer would be unable to receive a confirming email after ordering. If clients were not able to receive feedback in time, they would not know whether their orders are confirmed or not. This situation may cause adverse effects on the user experience and cause unnecessary loss.
   \\
   \midrule
   4
-  & Project
-  & User cannot receive email in time.
-  & 25
-  & 2
-  & If the network conditions of the buyer or the seller are poor, the network is actually delayed, resulting in the buyer not being able to receive the email immediately after performing the operation. When the buyer is unable to receive the feedback email in time, the buyer is not sure whether the order has been placed or cancelled successfully. It may cause the buyer to repeat the operation and bring losses to the buyer or seller. Eventually, the user's sense of experience is reduced. For example, a buyer who repeats a booking without receiving an email after ordering a product may cause the buyer to receive 2 copies of the same product and pay an additional fee.
+  & Business
+  & Service cancelation - Jess and James cannot deliver in time due to unforeseen circumstances.
+  & 5\%
+  & 1
+  & Unforeseen circumstances like Jess and James getting sick or unnecessary travel ban may result in delivery cancelation. When they are unable to deliver, they have to provide reasons for their customer and cancel the order. Even though they may lose some money and customers may be disappointed, the impact of it would be small.
   \\
   \bottomrule
   \\
@@ -360,7 +424,6 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
   \label{tab:riskImpactAnalysisTable}
 \end{tabularx}
 
-\clearpage
 \subsection{Risk Register}
 \begin{tabularx}{0.95\linewidth}{%
   >{\raggedright\arraybackslash}p{1cm}%
@@ -374,67 +437,74 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
   \\
   \midrule
   1
-  & Jess and James' extended functionality cannot be achieved
+  & Jess and James' extended functionality cannot be achieved.
   & The development team
-  & The development team can add .html files or JavaScript technology when using wix. Although it takes more time for the development team, it can achieve the user's expansion needs. This risk can also be controlled.
+  & The development team can redevelop the whole system based on traditional web technics. Although it may take more time for the development team,  it can meet the needs of users. Also, keeping more reusable interfaces during development can help reduce the impact of this risk.
   & Mitigate or avoid 
-  & The development team needs to design and add .html files or use JavaScript technology.
+  & The development team needs to keep more reusable interfaces during the development process.
   \\
   \midrule
   2
-  & Jess or James is sick or the coronavirus is serious
+  & A user creates lots of orders in a short time and then cancels them without any reason. 
   & Jess and James
-  & If the coronavirus should affect the delivery, the buyer needs to cancel the order. If the order cannot be delivered in time because the seller is sick or other assents, they can hire another person to deliver. 
-  & Mitigate or accept
-  & Jess and James needs to spend more cost when handling the delivery
+  & Limiting the number of times a user can cancel per week and limiting the time when the user cancels the order can help reduce the impact of this risk. For example, cancelation within 24 hours of the specified delivery time is not allowed. Also, customers would be asked to pay an advance deposit to reduce the economic loss caused by cancelation.
+  & Mitigate
+  & Jess and James need to spend effort to judge the reliability of the orders.
   \\
   \midrule
   3
-  & A user repeatedly cancels an order without reason, or the user cancels a large order
-  & Jess and James
-  & For example, by limiting the number of orders that the user cancels per week or limiting the time when the user cancels the order. Failure to cancel the order within the first 24 hours of the specified delivery time would be a viable solution. For a large number of orders, the seller should require the buyer to advance a part of the deposit in order to make up for the economic loss after canceling the order.
-  & Mitigate
-  & Jess and James need to focus on delivery orders at the same address, and determine whether they are reasonable orders.
-  \\
-  \midrule
-  4
-  & User cannot receive mail
-  & users(Jess \& James and users)
-  & If this risk occurs due to network extension, the system should be able to automatically detect the user's network conditions and promptly prompt. For example, when the buyer's network conditions are poor, the system should prompt the user that the operation may not be successful when the user submits the order or cancels the order. If the email is not received in time, please contact the seller to check whether the operation is successful. If there is a problem with the function of auto-replying emails, the administrator of the maintenance system should be able to detect it in the background, the system is abnormal, and fix the bug in time.
+  & Users cannot receive feedback from the system.
+  & Users(Jess \& James and customers)
+  & If this risk occurs due to network failure, the system should be able to detect the user's network conditions and provide prompts automatically. The operation of the user to place an order is idempotent, which means that two identical operations will only operate once. If there is a problem with the function of auto-replying emails, the administrator of the maintenance system should be able to detect it in the background, the system is abnormal, and fix the bug in time.
   & Mitigate
   & The system needs to consume resources to detect the user's network environment and react to it.
   \\
+  \midrule
+  4
+  & Jess or James is sick, or the government announced an unnecessary travel ban policy.
+  & Jess and James
+  & If an unnecessary travel ban policy is announced, Jess and James have to follow the rules and cancel their orders with an apology email sent to their customers. If the order cannot be delivered in time because the seller is sick or other assents, they can decide to hire another person to deliver or cancel their orders. It would be a trade-off between economic loss and user satisfaction loss.
+  & Mitigate or accept
+  & Hiring others for delivery would result in an economic loss, while cancelation of orders can bring negative effects to user experience.
+  \\ 
   \bottomrule
   \\
   \caption{Risk Register}  
   \label{tab:riskRegister}
 \end{tabularx}
 
+\clearpage
 \section{Technology}
 \label{sec:technology}
 The following are some technologies we researched for web development.
 \begin{tabularx}{0.95\linewidth}{%l%
-  >{\raggedright\arraybackslash}p{1.4cm}%
+  >{\raggedright\arraybackslash}p{1.5cm}%
   >{\raggedright\arraybackslash}p{1.8cm}%
   >{\raggedright\arraybackslash}X%
   >{\raggedright\arraybackslash}X%
-  >{\raggedright\arraybackslash}p{2.7cm}}
+  >{\raggedright\arraybackslash}X}
   \toprule
   Name & Responsibility & Description & Pros & Cons \\
   \midrule
   HTML
   & Front end language
   & Hypertext markup language (HTML) is a standard markup language designed for documents to be displayed in web browsers and describes the structure of web pages.
+  & <No comparison> 
+  & <No comparison>
   \\
   \midrule
   CSS
   & Front end language
   & Cascading Style Sheets is a style sheet language that describes the presentation of documents written in markup languages such as HTML.
+  & <No comparison>
+  & <No comparison>
   \\
   \midrule
   JavaScript
   & Front end language
   & JavaScript is a high-level, often just-in-time, multi-paradigm programming language that supports interactive web pages. It is an important part of web applications.
+  & <No comparison>
+  & <No comparison>
   \\
   \midrule
   Bootstrap
@@ -517,7 +587,7 @@ The following are some technologies we researched for web development.
   & Not for heavy projects;
   \\
   \midrule
-  WIX
+  Wix
   & Web development platform
   & Wix is a popular cloud-based website builder. It provides an easy-to-use combination of powerful features that make it easy to build websites.
   & Flexible; Provides an app market; Easy to use; Massive template collection;
@@ -816,19 +886,19 @@ Trello is used as the PMP board to help us manage our Scrum process. After the f
 \end{figure}
 
 
-\chapter{Project Execution, Monitoring and Control}
-\section{Project Status: Friday Week 9}
-\subsection{Process Related Artefacts}
-\subsection{Product Related Artefacts}
-\subsection{Risk Monitoring and Control}
-\section{Project Status: Friday week 10}
-\subsection{Process Related Artefacts}
-\subsection{Product Related Artefacts}
-\subsection{Risk Monitoring and Control}
-\section{Project Status: Friday week 10}
-\subsection{Process Related Artefacts}
-\subsection{Product Related Artefacts}
-\subsection{Risk Monitoring and Control}
+% \chapter{Project Execution, Monitoring and Control}
+% \section{Project Status: Friday Week 9}
+% \subsection{Process Related Artefacts}
+% \subsection{Product Related Artefacts}
+% \subsection{Risk Monitoring and Control}
+% \section{Project Status: Friday week 10}
+% \subsection{Process Related Artefacts}
+% \subsection{Product Related Artefacts}
+% \subsection{Risk Monitoring and Control}
+% \section{Project Status: Friday week 10}
+% \subsection{Process Related Artefacts}
+% \subsection{Product Related Artefacts}
+% \subsection{Risk Monitoring and Control}
 
 
 
