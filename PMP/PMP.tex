@@ -56,8 +56,8 @@
 	\pagebreak
 \end{titlepage}
 
-\chapter*{Executive Summary}\label{sec:ESummary}
-   Jess and James plan to get a web-based system for online ordering of their produce box offerings. In this way, they may be able to gain more orders while maintaining their existing customer base. Because Jess and James are self-operated stores and have insufficient budgets, they tend to hire the students who registered software project management of the University of Melbourne to develop this system. 
+\chapter*{Executive Summary}
+   Jess and James plan to get a web-based system for online ordering of their produce box offerings. In this way, they may be able to gain more orders while maintaining their existing customer base. Because Jess and James are self-operated stores and have insufficient budgets, to reduce development costs, the online store would be implemented by a student team from the University of Melbourne.
 
    Firstly, the development team fully understood the needs of Jess and James. After two group meetings, they determined all the requirements, development models and risk analysis of the project. In addition, predict the possible problems and put forward corresponding solutions.Based on the consideration of the changes in the needs of the project itself and the size of the development team, they chose an agile Scrum model, which will be assigned tasks to members by a short Sprint. In the first phase (4.28-5.8), they plan to deliver a product that meets core requirements to Jess and James within 2 weeks. For instance, the website can implement basic functions such as user login, product selection, and order cancellation. After discussing with Jess and James, it is expected that the second stage of development work will begin on May 11. The core work at this stage is to improve other user needs, such as presenting JJFresh products in a more beautiful way. In the end, 3 iterations of development will be completed within 5 weeks (4.27-5.29), and then the complete website will be delivered.
 
@@ -70,14 +70,19 @@
 
 \tableofcontents
 \pagebreak
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
+\label{chap:intro}
 \pagenumbering{arabic}
 \section{Purpose of document}
-   This document details how the development team plans, implements, and monitors the development of the JJFresh online store. According to the project requirements specification, this document describes in detail the scope of the project and possible risks, and how to control it. The development team also described the technologies that will be used throughout the development process. In addition, Scrum Master made a project plan for the development team's size and project needs. This document will serve as one of the true sources of all parties involved in the entire development cycle, such as Scrum Master, Product Owner and developers.
+   This document provides details about how the development team plans, implements, and monitors the development of the JJFresh online store. 
+
+   According to the project requirements specification, this document describes in detail the scope of the project and possible risks, and how to control it. The technologies that will be used throughout the development process are defined by the development team, while the project plan containing the development team's size and project needs would be defined by the Scrum master.
+
+   This document will serve for all parties involved in the entire development cycle, such as Scrum Master, Product Owner and developers.
 
 \section{Audience of document}
-   All five people in the team participated in the preparation of the document. Firstly, Yicun Tian wrote the Executive Summary (part 2), Introduction (part 4), Roles and Responsibilities (part 6.1), Communication Plan (part 6.2) and Risk management (part 6.3) of the document.Secondly,Hongzhang Li completed Project Information (part 5). Moreover, Pin Wang and Chongjing Zhang as developers completed Technology (part 6.4). Zhangfeng Qiu, who served as Scrum Master, completed the Project Planning (6.5) and final proofreading of all document.
+  All of the people in the student team participated in the preparation of the document. Yicun Tian is responsible for writing the Executive Summary, Introduction (Chapter \ref{chap:intro}), Roles and Responsibilities (Section \ref{sec:rolesResponsibilities}), Communication Plan (Section \ref{sec:communicationPlan}), and Risk management (Section \ref{sec:riskManagement}). Hongzhang Li is the person who wrote the Project Information part (Chapter \ref{projectInformation}). Pin Wang and Chongjing Zhang, as developers, are responsible for defining the technology used to implement the project (Section \ref{sec:technology}). Zhangfeng Qiu, who served as Scrum Master, provide detail about the Project Planning (Section \ref{sec:projectPlanning}) and proofread all content in the document.
 
 \section{Evolution of document}
 \begin{tabularx}{0.95\linewidth}{%
@@ -85,13 +90,13 @@
   >{\raggedright\arraybackslash}p{2.2cm}%
   >{\raggedright\arraybackslash}p{1.5cm}%
   >{\raggedright\arraybackslash}X}
-  \toprule
+  \toprule{}
   Version & Created by & Date created & Comments\\
   \midrule
   Version 1.0
   & Yicun Tian, Hongkang Li, Pin Wang, Chongjing Zhang, Zhangfeng Qiu
   & 4.27
-  & In this version, five people of the team cooperated to complete section 1 to 6 of the Project Management Plan. In this process, we mainly carried out the preparation work before development, including the definition of key stakeholders, Scope and SDLC of the project, evaluation of business value, constraints, the definition of people's role in the team, communication plan, risk management, definition of the technology used in the project and project planning.
+  & In this version, the student team cooperated together to complete Chapter \ref{chap:intro} to Chapter \ref{chap:projectGovernance} of the Project Management Plan, including the definition of key stakeholders, Scope and SDLC of the project, evaluation of business value, constraints, the definition of people's role in the team, communication plan, risk management, definition of the technology used in the project and project planning.
   % \\
   % \midrule
   % Version 1.1
@@ -119,6 +124,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Project Information}
+\label{projectInformation}
 \section{Key Stakeholders}
 \begin{tabularx}{0.95\linewidth}{%
   >{\raggedright\arraybackslash}l%
@@ -134,12 +140,12 @@
   \midrule
   The teaching team
   & Internal
-  & The teaching team of SWEN90016 is playing the role of Product Owner in the project. They are responsible for contact with Jess and James and understand their need.  They cooperate with the SCRUM master of the project and help define the product backlog. Also, they give advice and feedback to the student team during the development process.
+  & The teaching team of SWEN90016 is playing the role of Product Owner in the project. They are responsible for contact with Jess and James and understand their need.  They cooperate with the Scrum master of the project and help define the product backlog. Also, they give advice and feedback to the student team during the development process.
   \\
   \midrule
   The student team
   & Internal
-  & The student team cooperates as a SCRUM team in the project. They are responsible for both planning and developing the online store project. 
+  & The student team cooperates as a Scrum team in the project. They are responsible for both planning and developing the online store project. 
   \\
   \midrule
   Customers
@@ -195,12 +201,12 @@ Also, the features below are out-of-scope:
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Delivery approach}
-The delivery approach we choose for our project is \textbf{SCRUM}, an agile method that can provide high flexibility and quick delivery. Our decision is based on the following reasons.
+The delivery approach we choose for our project is \textbf{Scrum}, an agile method that can provide high flexibility and quick delivery. Our decision is based on the following reasons.
 \begin{enumerate}
   \item Scrum can provide an incremental delivery system to help the JJFresh online store retain flexibility while continually producing outcomes. As each sprint backlog represents a new release of the product, we can shorten the time for the project to our clients and improve the user experience of the website based on the feedback from them. Clients are continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
-  \item The sprint process in the SCRUM model can provide regular adaptation to changing circumstances. Unlike the Waterfall model, which is very difficult to move back to makes changes in the previous phases, using Scrum would make the development of the JJFresh online store website able to adapt to unforeseen circumstances, allowing for changes to be easily incorporated if required.
+  \item The sprint process in the Scrum model can provide regular adaptation to changing circumstances. Unlike the Waterfall model, which is very difficult to move back to makes changes in the previous phases, using Scrum would make the development of the JJFresh online store website able to adapt to unforeseen circumstances, allowing for changes to be easily incorporated if required.
   \item By doing sprint review and sprint retrospective at the end of each sprint, the client and team know exactly what is complete and what is not. This reduces the risk in the development process.
-  \item SCRUM intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with five members. The Waterfall model, which involves large teams and lack of coordination among team members, can not meet our needs.
+  \item Scrum intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with five members. The Waterfall model, which involves large teams and lack of coordination among team members, can not meet our needs.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Business Value}
@@ -237,20 +243,22 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
   \caption{Business Value}  
   \label{tab:businessValue}
 \end{tabularx}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Constraints}
 \begin{itemize}
-  \item Team members are lack of experience in SCRUM. SCRUM is an Agile process and is difficult to do without experience, especially an experienced SCRUM master. The student who plays the role of SCRUM master has no SCRUM management experience before. There may be many problems during the development process.
+  \item Team members are lack of experience in Scrum. Scrum is an Agile process and is difficult to do without experience, especially an experienced Scrum master. The student who plays the role of Scrum master has no Scrum management experience before. There may be many problems during the development process.
   \item People in the development team are unfamiliar with creating a website in Wix.com. Also, students who are responsible for the implementation of the project are not full-time workers. The efficiency of their development may be low, which may result in the delay of the project.
-  \item A virtual team may not able to follow all the processes in SCRUM. Appropriate improvements and compromises would be applied to some specific processes in the SCRUM. Communication in a virtual team is less frequent and less rich than face-to-face interaction. Some of the team members are not in Australia, and because of the time difference, daily SCRUM will be conducted via chat, which may bring negative effects to the project.
+  \item A virtual team may not able to follow all the processes in Scrum. Appropriate improvements and compromises would be applied to some specific processes in the Scrum. Communication in a virtual team is less frequent and less rich than face-to-face interaction. Some of the team members are not in Australia, and because of the time difference, daily Scrum will be conducted via chat, which may bring negative effects to the project.
   \item The tool provided by Wix.com only has limited functions, which make it impossible to achieve the requirements perfectly. And the website implement by Wix.com has poor scalability. If Jess and James want to expand their business scale, the development team may have to redevelop the entire project with other web technics.
   \item The delivery range of Jess and James is limited, and users who are too far away cannot get services.
   \item The time limit of the project is only about one month. The overall implementation of the project may not be perfect in such a short time.
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Project Governance}
+\label{chap:projectGovernance}
 \section{Roles and Responsibilities}
+\label{sec:rolesResponsibilities}
 \begin{tabularx}{0.95\linewidth}{%
   l%
   >{\raggedright\arraybackslash}p{2.2cm}%
@@ -284,12 +292,16 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
 \end{tabularx}
 
 \section{Communication Plan}
-Our group first uses “slack” for the main information transfer, such as publishing message notifications, file sharing, etc. Secondly, using “trello” to arrange the various stages of the project plan and the content is managed by the scrum master. Furthermore, “github” is used to manage output products, such as the release of code and report.
+\label{sec:communicationPlan}
+Our group first uses “slack” for the main information transfer, such as publishing message notifications, file sharing, etc. Secondly, using “trello” to arrange the various stages of the project plan and the content is managed by the Scrum master. Furthermore, “github” is used to manage output products, such as the release of code and report.
 
-According to the scrum development cycle and the difficulty of this project development, we will conduct a 15-minute meeting discussion on zoom every day, mainly to summarize the results of yesterday and the arrangement of today's tasks. If a team member is absent from a meeting, the person in charge will use email or telephone to communicate with him.
+According to the Scrum development cycle and the difficulty of this project development, we will conduct a 15-minute meeting discussion on zoom every day, mainly to summarize the results of yesterday and the arrangement of today's tasks. If a team member is absent from a meeting, the person in charge will use email or telephone to communicate with him.
 
 \clearpage
 \section{Risk Management}
+\label{sec:riskManagement}
+
+
 \subsection{Risk Impact Analysis Table}
 We follow the following scoring rules to assess the impact of each risk:
 \textit{(1) no impact; (2) minimal impact; (3) moderate impact; (4) severe impact; and (5) catastrophic impact; }
@@ -393,6 +405,7 @@ The Risk Impact analysis table is shown in \ref{tab:riskImpactAnalysisTable}.
 \end{tabularx}
 
 \section{Technology}
+\label{sec:technology}
 The following are some technologies we researched for web development.
 \begin{tabularx}{0.95\linewidth}{%l%
   >{\raggedright\arraybackslash}p{1.4cm}%
@@ -530,7 +543,8 @@ Compare to other website builders, Wix is more flexibly as it supports usage of 
 By using Wix, we will save time of building and integrating the frameworks and adjusting the component properties with the help of visible user interface.And since we don't have much experience in web development, Wix's characteristic that it requires as least coding as possible is suitable us, and can help us focus on project management instead of catching up with the technology stacks. Therefore, we decided to use Wix to develop the website.
 
 \section{Project Planning}
-The SDLC of our project is SCRUM. Since the key requirements for the initial development provided by Jess and James are fixed, a Fixed-Scope Release Planning would be used to plan our project.
+\label{sec:projectPlanning}
+The SDLC of our project is Scrum. Since the key requirements for the initial development provided by Jess and James are fixed, a Fixed-Scope Release Planning would be used to plan our project.
 
 \subsection{Product Backlog}
 The detail of product backlog is shown in table \ref{tab:productBacklog}. BFTB Score is the abbreviate of the Bang-for-the-Buck Score, which is a way of measuring how to get the most value in the shortest time. It is used to help assess the priority of the features. The BFTB Score is calculated by the formula below:
@@ -538,7 +552,7 @@ $$
   \text{BFTB Score} = \frac{\text{Value Point}}{\text{Store Point}}
 $$
 
-The story points of different features are estimated by the development team and the SCRUM master, based on the volume, risk, uncertainty and complexity of the features. The value points of them are estimated by the product owners. \textbf{Fabonacci sequence} is used to provided relative estimation to both story point and value point. Each story point equals about an hour of work.
+The story points of different features are estimated by the development team and the Scrum master, based on the volume, risk, uncertainty and complexity of the features. The value points of them are estimated by the product owners. \textbf{Fabonacci sequence} is used to provided relative estimation to both story point and value point. Each story point equals about an hour of work.
 
 Except for the tree future user stories at the end of the product backlog table, all others are must-have stories because they are key requirements defined by Jess and James.
 \begin{tabularx}{0.95\linewidth}{%
@@ -718,7 +732,6 @@ The development phase of our project would start on \textbf{Monday, April 25}. S
 
 The first phase is to let the website go online without the function of purchase. The website can display all kinds of information about the products and provide the service of user registration. At the same time, the database is initially established to record the data of users and products. The first sprint will last for two weeks, \textbf{from Monday, April 27 to Friday, May 8}. 
 
-
 In the second phase, we need to realize the function that users place orders to purchase products, and sellers can view and modify user orders. Preliminary testing will also take place at this phase. The second sprint will last for two weeks, \textbf{from Monday, May 11 to Friday, May 22}.
 
 The third stage is mainly based on user feedback to repair the vulnerability, carry out more tests and improve the existing functions. If some functions left over from the first two sprints are not implemented, they will also be solved in this sprint. As the project is nearing its end and there is less work left, the sprint in this phase will last only one week, \textbf{from Monday, May 25 to Friday, May 29.}
@@ -727,7 +740,7 @@ On \textbf{the first Monday of every sprint}, a Sprint Planning meeting would be
 
 On \textbf{the last Friday of each sprint}, a Sprint Review meeting would be held to demonstrate the new features to Stakeholders, and a Sprint Retrospective meeting would be held to review the sprint.
 
-A 15-minute Daily SCRUM would be held \textbf{everyday} to start up the jobs. Everyone has to share what he/she did yesterday, what he/she plan to do, and what obstacles are slowing him/her.
+A 15-minute Daily Scrum would be held \textbf{everyday} to start up the jobs. Everyone has to share what he/she did yesterday, what he/she plan to do, and what obstacles are slowing him/her.
 
 \subsection{The First Sprint Plan}
 As mention in section \ref{sec:sprintCycle}, the main goal of the first sprint is to launch a webpage where customers can browse products. Considering both the BFTB Score, which is shown in table \ref{tab:productBacklog} and the actual development needs, the Sprint Backlog of the first sprint is shown in table \ref{tab:firstSprintBacklog}. The total velocity and the delivery value of the first sprint is 30 story points and 25 value points, respectively. 
@@ -787,7 +800,7 @@ As mention in section \ref{sec:sprintCycle}, the main goal of the first sprint i
   \label{tab:firstSprintBacklog}
 \end{tabularx}
 
-Trello is used as the PMP board to help us manage our SCRUM process. After the first sprint planning, the PMP board of our project is shown in Figure \ref{fig:firstSprintPmpBoard}. The label of the card is about the value point of the feature. The Story point of the feature is shown in the upper right corner of the card.
+Trello is used as the PMP board to help us manage our Scrum process. After the first sprint planning, the PMP board of our project is shown in Figure \ref{fig:firstSprintPmpBoard}. The label of the card is about the value point of the feature. The Story point of the feature is shown in the upper right corner of the card.
 
 \begin{figure}[htp]
 \centering
