@@ -19,6 +19,7 @@
 % Change distance between chapter header and text
 \titlespacing{\chapter}{0pt}{50pt}{2\baselineskip}
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}} 
+\usepackage[usestackEOL]{stackengine}
 
 \pagenumbering{roman}
 
@@ -35,11 +36,13 @@
 		School of Computing and Information Systems \\
 		SWEN90016 Software Processes and Management\\
 		Semester 1 – 2020 \par}
-		\vspace{3cm}
+	\vspace{3cm}
+
 	{\Huge \textbf{JJFresh -- Project Management Plan}} \\
-	%\vspace{1cm}
+  \vspace{0.5cm}
+	{\normalsize Version 1.2 \par}
 	%{\large \textbf{xxxxx} \par}
-	\vspace{3.5cm}
+	\vspace{2.5cm}
 	{\normalsize Zhaofeng Qiu 1101584\\ % \\ specifies a new line
 	             Chongjing Zhang 1055520\\
 	             Pin Wang 1056745 \\
@@ -47,9 +50,9 @@
 	             Hongkang Li 977063\par}
 	\vspace{3cm}
     
-    \centering \includegraphics[scale=0.12]{logo.pdf}
-    
-    \vspace{0.5cm}
+  \centering \includegraphics[scale=0.12]{logo.pdf}
+  
+  \vspace{0.5cm}
 		
 	% Set the date
 	{\normalsize \today \par}
@@ -90,27 +93,32 @@
    This document will serve for all parties involved in the entire development cycle, such as Scrum Master, Product Owner and developers.
 
 \section{Audience of document}
-  All of the people in the student team participated in the preparation of the document. Yicun Tian is responsible for writing the Executive Summary, Introduction (Chapter \ref{chap:intro}), Roles and Responsibilities (Section \ref{sec:rolesResponsibilities}), Communication Plan (Section \ref{sec:communicationPlan}), and Risk management (Section \ref{sec:riskManagement}). Hongzhang Li is the person who wrote the Project Information part (Chapter \ref{projectInformation}). Pin Wang and Chongjing Zhang, as developers, are responsible for defining the technology used to implement the project (Section \ref{sec:technology}). Zhangfeng Qiu, who served as Scrum Master, provide detail about the Project Planning (Section \ref{sec:projectPlanning}) and proofread all content in the document.
+\label{sec:audienceOfDocument}
+<TODO>
 
 \section{Evolution of document}
+\label{sec:evolutionOfDocument}
+All of the people in the student team participated in the preparation of the document. Yicun Tian is responsible for writing the Executive Summary, Introduction (Chapter \ref{chap:intro}), Roles and Responsibilities (Section \ref{sec:rolesResponsibilities}), Communication Plan (Section \ref{sec:communicationPlan}), and Risk management (Section \ref{sec:riskManagement}). Hongzhang Li is the person who wrote the Project Information part (Chapter \ref{projectInformation}). Pin Wang and Chongjing Zhang, as developers, are responsible for defining the technology used to implement the project (Section \ref{sec:technology}). Zhangfeng Qiu, who served as Scrum Master, provide detail about the Project Planning (Section \ref{sec:projectPlanning}) and proofread all content in the document. The evolution of document is shown in Table \ref{tab:evolutionOfDocument}.
 \begin{tabularx}{0.95\linewidth}{%
-  l%
-  >{\raggedright\arraybackslash}p{2.2cm}%
-  >{\raggedright\arraybackslash}p{1.5cm}%
-  >{\raggedright\arraybackslash}X}
+  >{\raggedright\arraybackslash}p{0.1\linewidth}%
+  >{\raggedright\arraybackslash}p{0.17\linewidth}%
+  >{\raggedright\arraybackslash}p{0.13\linewidth}%
+  >{\raggedright\arraybackslash}p{0.40\linewidth}
+  }
   \toprule{}
   Version & Created by & Date created & Comments\\
   \midrule
   Version 1.0
-  & Yicun Tian, Hongkang Li, Pin Wang, Chongjing Zhang, Zhangfeng Qiu
-  & 4.27
+  & Yicun Tian,\newline Hongkang Li,\newline Pin Wang,\newline Chongjing Zhang,\newline Zhangfeng Qiu
+  & April 27, 2020
   & In this version, the student team cooperated together to complete Chapter \ref{chap:intro} to Chapter \ref{chap:projectGovernance} of the Project Management Plan, including the definition of key stakeholders, Scope and SDLC of the project, evaluation of business value, constraints, the definition of people's role in the team, communication plan, risk management, definition of the technology used in the project and project planning.
-  % \\
-  % \midrule
-  % Version 1.1
-  % & å
-  % & 5.23
-  % & 
+  \\
+  \midrule
+  Version 1.1
+  & Yicun Tian,\newline Hongkang Li,\newline Pin Wang,\newline Chongjing Zhang,\newline Zhangfeng Qiu
+  & May 18, 2020
+  & In this version, the document is updated based on Rajesh Chittor's feedback and the progress of the project. Section \ref{sec:ps1} is now included in the document. The detail of the update history is shown in section \ref{sec:v1-2Up}.
+  \\
   % \\
   % \midrule
   % Version 1.2
@@ -130,13 +138,29 @@
   \label{tab:evolutionOfDocument}
 \end{tabularx}
 
+\subsection{Version 1.2 update history}
+\label{sec:v1-2Up}
+<TODO:1>
+  \begin{enumerate}
+    \item Redesign the table in the document. Increase readability and change the date format.
+    \item Provide names of the people in the teaching team and the student team.
+    \item Move the origin section \ref{sec:audienceOfDocument} to section \ref{tab:evolutionOfDocument}. Mention who the document will serve in section \ref{sec:audienceOfDocument}
+    \item Add one suppliers into key stackholders in section \ref{sec:keyStakeholders} and provoid benefit analysis for them in section \ref{sec:businessValue}.
+    \item Fix mistakes about the advantage of Scrum in section \ref{sec:deliveryApproach}.
+    \item Change the roles in section \ref{sec:rolesResponsibilities}. Now, Yicun Tian and Hongkang Li would play the role of Product owner and the teaching team would play the role of subject matter expert.
+    \item Provide detail about the virtual meeting rooms in section \ref{sec:communicationPlan}.
+  \end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Project Information}
+\chapter{Project Information}{}
 \label{projectInformation}
 \section{Key Stakeholders}
+\label{sec:keyStakeholders}
+The key stakeholders here are classified according to their relevant interests. Different groups of stakeholders below get different benefits from the project. The detail of the roles and responsibilities definition would be discussed in section \ref{sec:rolesResponsibilities}.
+\\
 \begin{tabularx}{0.95\linewidth}{%
-  >{\raggedright\arraybackslash}l%
-  >{\raggedright\arraybackslash}p{1.5cm}%
+  >{\raggedright\arraybackslash}p{0.3\linewidth}%
+  >{\raggedright\arraybackslash}p{0.1\linewidth}%
   >{\raggedright\arraybackslash}X}
   \toprule
   Stakeholders & Internal/ External & Influence on Project \\
@@ -146,12 +170,29 @@
   & Jess and James are the people who defined the requirements of the project. They will not directly participate in the development of the online store website. They are users of the website and can provide feedback to the development team during the development process.
   \\
   \midrule
-  The teaching team
+  The teaching team:
+  \begin{itemize}
+    \item Marion Zal
+    \item Doc Wallace
+    \item Rajesh Chittor Sundaram
+    \item Esther Rotimi
+    \item Subramaniam Ramasubramanian
+    \item Chong Kuok
+    \item Saksham Agrawal
+  \end{itemize}
   & Internal
   & The teaching team of SWEN90016 is playing the role of Product Owner in the project. They are responsible for contact with Jess and James and understand their need.  They cooperate with the Scrum master of the project and help define the product backlog. Also, they give advice and feedback to the student team during the development process.
   \\
   \midrule
-  The student team
+  The student team:
+  \begin{itemize}
+    \item Yicun Tian
+    \item Hongkang Li
+    \item Pin Wang
+    \item Chongjing Zhang
+    \item Zhangfeng Qiu
+  \end{itemize}
+
   & Internal
   & The student team cooperates as a Scrum team in the project. They are responsible for both planning and developing the online store project. 
   \\
@@ -159,6 +200,11 @@
   Customers
   & External
   & The satisfaction of the customers is an important factor for project success. The main source of website revenue comes from them. Their feedback can help the development team improve the application.
+  \\
+  \midrule
+  Suppliers
+  & External
+  & <TODO>
   \\
   \bottomrule
   \\
@@ -168,6 +214,7 @@
 
 \section{Scope}
 \subsection{What is in-scope?}
+<TODO: This has been written exhaustively, but remember each of these requirements should be listed separately since they form an important part in the final acceptance and testing of the product. For example, there are two different login functionalities, one for admin and one for customers. You can mention them as different requirements under login system. Each of the requirements should be simple, concise and be verifiable. Example 1: The system shall provide a UI for the customers to login into the system by entering a user name and a password; Example 2: The system shall provide a UI for the customers to login into the system by entering a user name and a password>
 \begin{enumerate}
   \item \textbf{Login system}: Users need to register an account with personal information for the first time. They should be able to log in with an email address and a password. After log in to the online store website, they are able to manage their orders. The owners of JJFresh should have an admin account to manage all the orders. Both customer account and admin account would be accessible from a single URL.
   
@@ -209,15 +256,17 @@ Also, the features below are out-of-scope:
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Delivery approach}
+\label{sec:deliveryApproach}
 The delivery approach we choose for our project is \textbf{Scrum}, an agile method that can provide high flexibility and quick delivery. Our decision is based on the following reasons.
 \begin{enumerate}
-  \item Scrum can provide an incremental delivery system to help the JJFresh online store retain flexibility while continually producing outcomes. As each sprint backlog represents a new release of the product, we can shorten the time for the project to our clients and improve the user experience of the website based on the feedback from them. Clients are continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
+  \item Scrum can provide an incremental delivery system to help the JJFresh online store retain flexibility while continually producing outcomes. As each sprint backlog represents a new release of the product, the sprint process provides an increment delivery system, which can shorten the time for saleable product delivery. The sprint review in the Scrum process can help the software development meet the requirement of the stakeholders. Also, the sooner the application enters the market, the sooner the project team can get feedback from the users to improve their product, which can help improve the user experience. Clients are continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
   \item The sprint process in the Scrum model can provide regular adaptation to changing circumstances. Unlike the Waterfall model, which is very difficult to move back to makes changes in the previous phases, using Scrum would make the development of the JJFresh online store website able to adapt to unforeseen circumstances, allowing for changes to be easily incorporated if required.
   \item By doing sprint review and sprint retrospective at the end of each sprint, the client and team know exactly what is complete and what is not. This reduces the risk in the development process.
   \item Scrum intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with five members. The Waterfall model, which involves large teams and lack of coordination among team members, can not meet our needs.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Business Value}
+\label{sec:businessValue}
 JJFresh is currently busy in the morning but almost empty in the afternoon. The deployment of this project will keep JJFresh's existing customers who shop in the morning and shift the afternoon business hours from offline to online, which offers delivery service for current and potential customers who cannot go to JJFresh store at that time. The online store will operate 24 / 7, which is much longer compare to the old business hours, thus provides customers with the convenience of placing orders at any time. With these advantages, the online store project would attack more customers for JJFresh. The increase in customers can increase fruit and vegetable orders, and therefore help Jess and James gain more financial benefits and avoid JJFresh from being closed. The financial and Non-Financial benefits for different stakeholders are shown in Table \ref{tab:businessValue}.
 
 \clearpage
@@ -247,6 +296,11 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
   & For the customers who are used to buy fruits from JJFresh, home delivery can save them time and money. They don't need to spend money on transportation to jjfresh. Of course, the delivery fee must be considered. But it would be a trade-off.
   & Customers would be able to buy fruits and vegetables with high quality in a more convenient way. Also, for unforeseen circumstances like Covid-19, buying online can reduce their unnecessary travel and keep them safe.
   \\
+  \midrule
+  Suppliers
+  & <Todo>
+  & <Todo>
+  \\
   \bottomrule
   \\
   \caption{Business Value}  
@@ -270,8 +324,8 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
 \section{Roles and Responsibilities}
 \label{sec:rolesResponsibilities}
 \begin{tabularx}{0.95\linewidth}{%
-  l%
-  >{\raggedright\arraybackslash}p{2.2cm}%
+  >{\raggedright\arraybackslash}p{0.1\linewidth}%
+  >{\raggedright\arraybackslash}p{0.2\linewidth}%
   >{\raggedright\arraybackslash}X}
   \toprule
   Roles & Member & Responsibilities \\
@@ -282,8 +336,8 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
   \\
   \midrule
   Product Owner
-  & The teaching team
-  & The product owner is the spokesperson for the customer or stakeholders. Their primary responsibility is to ensure the product to-do list is transparent and clearly expressed, and everyone in the team has the same understanding of the project. Also, they are responsible for defining the product backlog with the Scrum master.
+  & Yicun Tian, \newline Hongkang Li
+  & The product owner is the spokesperson for the customer or stakeholders. Their primary responsibility is to ensure the product to-do list is transparent and clearly expressed, and everyone in the team has the same understanding of the project. Also, they are responsible for defining the product backlog with the Scrum master. They have no active role to play in daily stand-up, but they are welcome to attend.
   \\
   \midrule
   Scrum Master
@@ -291,13 +345,13 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
   & The Scrum Master is the person in charge of the Scrum process. His primary responsibility is to guide the development team and communicate with product owners in daily development activities.
   \\
   \midrule
-  Dev Team Members
-  & Pin Wang, Chongjing Zhang
+  Devlopment Team Members
+  & Pin Wang, \newline Chongjing Zhang
   & The Scrum development team is composed of professionals who deliver the incremental work of "Done" products that may be released at the end of each Sprint.
   \\
   \midrule
   Subject Matter Expert
-  & Tutor(Rajesh), Tian Yicun, Li Hongkang
+  & The teaching team -- mainly by Rajesh Chittor Sundaram.
   & The people with specialized knowledge or talent that is needed by the Team
   \\
   \bottomrule
@@ -309,7 +363,14 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
 \clearpage
 \section{Communication Plan}
 \label{sec:communicationPlan}
-Firstly, as a virtual team, we mainly use \textit{Slack} and \textit{Zoom} for information transfer, such as publishing message notifications, file sharing, etc. 
+Firstly, as a virtual team, we mainly use \textit{Slack} and \textit{Zoom} for information transfer, such as publishing message notifications, file sharing, etc. The link of each \textit{Zoom} meeting would be released by Scrum Master in the meeting channel of the project \textit{Slack} group. The Scrum Master is responsible for reminding the team to join the meeting in time. The meeting record would be provided by the Scrum Master. The example of our virtual meeting communication system is shown in Figure \ref{fig:meeting}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=\textwidth]{Figures/meeting.png}
+\caption{Example of our Virtual Meeting Communication System}
+\label{fig:meeting}
+\end{figure}
 
 Secondly, we use \textit{Trello} to help manage our Agile Board. Both the Project Backlog and the Sprint Backlog are managed on the Agile Board.
 
@@ -894,11 +955,13 @@ Trello is used as the PMP board to help us manage our Scrum process. After the f
 \end{figure}
 
 
-% \chapter{Project Execution, Monitoring and Control}
-% \section{Project Status: Friday Week 9}
-% \subsection{Process Related Artefacts}
-% \subsection{Product Related Artefacts}
-% \subsection{Risk Monitoring and Control}
+\chapter{Project Execution, Monitoring and Control}
+\label{chap:pe}
+\section{Project Status: Friday Week 9}
+\label{sec:ps1}
+\subsection{Process Related Artefacts}
+\subsection{Product Related Artefacts}
+\subsection{Risk Monitoring and Control}
 % \section{Project Status: Friday week 10}
 % \subsection{Process Related Artefacts}
 % \subsection{Product Related Artefacts}
