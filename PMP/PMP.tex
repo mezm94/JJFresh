@@ -60,19 +60,17 @@
 \end{titlepage}
 
 \chapter*{Executive Summary}
-   Jess and James plan to change their business model by getting a web-based system for online ordering of their produce box offerings. In this way, they may be able to gain more orders while maintaining their existing customer base. Because Jess and James want to reduce the cost of website development, the JJFresh online store will be implemented by a student team from the University of Melbourne.
+   The project's goal is to provide Jess and James with an online store, which is expected to increase their revenue. Jess and James are the Bussiness Owners of the project. The teaching team of SWEN90016 would take the role of Subject Matter Expert to help the student team. The customers of JJFresh would be our main external stakeholders.
 
-   In this project, Jess and James are the Bussiness Owners of the project. The teaching team of the Software Processes and Management subject would take the role of Product Owner and help the student team to complete the project. As the approach we used to deliver our project is Scrum, the student team would cooperate as a Scrum team to maximize their efficiency. The customers of JJFresh would be our main external stakeholders.
+   All the in-scope and out-scope requirements of the project have been defined and confirmed by Jess and James. Base on the consideration of flexibility and the speed of website delivery, Scrum is chosen as our software development cycle model.
 
-   Through communication with Jess and James, the student team fully understood the needs of Jess and James. All the in-scope and out-scope requirements of the project have been defined and confirmed by Jess and James. Three future enhancement would not be considered in the initial development. Besides, base on the consideration of flexibility and the speed of website delivery, Scrum is chosen as our software development cycle model.
+   The business value of this project is to meet the need of the people who want to buy fruit and vegetables from JJFresh but cannot go during the business hours of the physical store. The increase in orders would also increase the revenue of the store. Moreover, the teaching team and the student team can gain benefits from this project. The risks of the project have been analyzed, and possible solutions for them are also provided in this report. 
 
-   The business value of this project is to meet the need of the people who want to buy fruit and vegetables from JJFresh but cannot go during the business hours of the physical store. The increase in orders would also increase the revenue of the store. Moreover, the teaching team and the student team can gain benefits from this project.
+   The technology we choose to implement the online store is \textit{Wix}. The student team is a virtual team and the basic communication tools are \textit{Zoom} and \textit{Slack}. Our communication plan is detailed.
 
-   The risks of the project have been analyzed, and possible solutions for them are also provided in this report. The technology we choose to implement the online store is \textit{Wix}, which can help quickly create a website. Since we are a virtual team, we mainly use a cloud-based video conferencing tool called \textit{Zoom} to communicate. \textit{Slack} is also used to help us exchange information and resources.
+   The project development will take at most 5 weeks, from April 27 to May 8, 2020. We plan to finish the project within two sprints, each last two weeks. The fifth week is only used for flexible control. 
 
-   The Scrum process would be finished in 5 weeks, from April 27 to May 8. There would be three sprints in our Scrum process. Due to the time constraints of the project, the first two sprint would last two weeks, while the last one would only last one week. All of the story points would be assigned to the first two sprints. The last sprint is only used for flexible control.
-
-   Through rough estimation, the project will cost Jess and James about \$ 3,000. The project will provide Jess and James with an online store, which is expected to increase their revenue. 
+   The development of the project will not consume any funds. But if Jess and James want to upgrade their website to Wix Premium, they would have to pay 10 - 27 US\$ per month. It depends on the plans they choose. 
 
 
 \addcontentsline{toc}{chapter}{Executive Summary}
@@ -140,7 +138,7 @@ All of the people in the student team participated in the preparation of the doc
 
 \subsection{Version 1.2 update history}
 \label{sec:v1-2Up}
-<TODO:1>
+<TODO>
   \begin{enumerate}
     \item Redesign all the table in the document. Increase readability and change the date format.
     \item Provide names of the people in the teaching team and the student team.
@@ -226,19 +224,38 @@ The key stakeholders here are classified according to their relevant interests. 
 \subsection{What is in-scope?}
 <TODO: This has been written exhaustively, but remember each of these requirements should be listed separately since they form an important part in the final acceptance and testing of the product. For example, there are two different login functionalities, one for admin and one for customers. You can mention them as different requirements under login system. Each of the requirements should be simple, concise and be verifiable. Example 1: The system shall provide a UI for the customers to login into the system by entering a user name and a password; Example 2: The system shall provide a UI for the customers to login into the system by entering a user name and a password>
 \begin{enumerate}
-  \item \textbf{Customers Login functionality}: Users need to register an account with personal information for the first time. They should be able to log in with an email address and a password in the UI provided by system. After logging in to the online store website, they can manage their orders. The owners of JJFresh should have an admin account to manage all the orders. Both customer account and admin account would be accessible from a single URL.
+  \item \textbf{Customers Login functionality}: 
+  \begin{enumerate}
+    \item Customes need to register an account with personal information for the first time. 
+    \item Customes should be able to log in with an email address and a password in the UI provided by system. 
+    \item Customes can browse products without login, but they can't make any order in this way. 
+    \item Both customer account and admin account would be accessible from a single URL.
+  \end{enumerate}
 
   \textit{High priority}: An online store website is not only for browsing information but also a platform for trading fruits and vegetables. Without a Login system, customers can not place their orders.
   
-  \item \textbf{Admin Login functionality}: Admin, Jess and James, also need to login to the online store to manage all the orders. They are also be able to login with an email address and a password by a UI provided by system. Admin account may be register in the background when the online website be finished.
+  \item \textbf{Admin Login functionality}: 
+  \begin{enumerate}
+    \item The owners of JJFresh should have an admin account to manage all the orders. The admin accounts are provided by the development team at the first milestone. After the second milestone, they can create more admin account.
+    \item They are also be able to login with an email address and a password by a UI provided by system.
+    \item Both customer account and admin account would be accessible from a single URL.
+  \end{enumerate}
 
   \textit{High priority}: admin login functionality offers the way to let Jess and James manage all the orders.
 
-  \item \textbf{Management of personal information}: Users should be able to add or edit their personal information. The name, home address, and upon three multiple contact phone numbers are included in the personal information.
+  \item \textbf{Management of personal information}: 
+  \begin{enumerate}
+    \item Users should be able to add or edit their personal information. 
+    \item The name, home address, and upon three multiple contact phone numbers are included in the personal information.
+  \end{enumerate}
 
   \textit{High priority}: If the customers change their phone number or address, this function is important to avoid some trouble caused by outdated information. Without this feature, Jess and James may deliver products to the wrong address and cannot contact the buyer.
 
-  \item \textbf{Commodity display system}: Website should display all type of the products with different size and price to the users whenever they are going to purchase or just browse it. In initial stage, JJFresh provide three options for products, the namely fruit box, vegetable box and fruit and vegetable box. Each product has three size, small, medium and large.
+  \item \textbf{Product Menu system}: 
+  \begin{enumerate}
+    \item Website should display all type of the products with different size and price to the users whenever they are going to purchase or just browse it. 
+    \item In initial stage, JJFresh provide three options for products, the namely fruit box, vegetable box and fruit and vegetable box. Each product has three size, small, medium and large.
+  \end{enumerate}
 
   \textit{High priority}: User should know which products are sold in this online store and its size and price. Purchase cannot be made without this function because customers do not even know which fruit and vegetable they can buy.
   
@@ -1721,8 +1738,6 @@ In the sprint retrospective, we discuss what went well in the first sprint. All 
 \end{tabularx}  
 
 \subsection{Product Related Artefacts}
-< Include all products related artefacts such as requirements, use cases, user stories, designs, completed features lists, screen shots to show the status of the product and any other product related artefacts that will demonstrate to your markers how well you were progressing towards achieving the milestones you planned (you may include them in an Appendix with a reference from this section to improve readability of the document).>
-<All other artefacts that show progress but cannot be included in the report, including code written by your team (if applicable), must be submitted as a .zip file through the submission link we provide for this purpose>
 \textbf{The status of the product}
 The online store website can be accessed now on https://pinwang4.wixsite.com/website. A screenshot of its homepage is shown in Figure \ref{fig:homepage}. The website is in well designed, with a user-friendly interface and all the features required in the initial development. The use cases, user stories of the product is shown in Table \ref{tab:productBacklog} in Section \ref{sec:productBacklog}, which would not be shown again here. For a quick look, a completed feature lists is provided again below:
 \\
