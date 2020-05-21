@@ -224,56 +224,78 @@ The key stakeholders here are classified according to their relevant interests. 
 \subsection{What is in-scope?}
 <TODO: This has been written exhaustively, but remember each of these requirements should be listed separately since they form an important part in the final acceptance and testing of the product. For example, there are two different login functionalities, one for admin and one for customers. You can mention them as different requirements under login system. Each of the requirements should be simple, concise and be verifiable. Example 1: The system shall provide a UI for the customers to login into the system by entering a user name and a password; Example 2: The system shall provide a UI for the customers to login into the system by entering a user name and a password>
 \begin{enumerate}
-  \item \textbf{Customers Login functionality}: 
+  \item \textbf{Customers Login functionality}:
   \begin{enumerate}
-    \item Customes need to register an account with personal information for the first time. 
-    \item Customes should be able to log in with an email address and a password in the UI provided by system. 
-    \item Customes can browse products without login, but they can't make any order in this way. 
-    \item Both customer account and admin account would be accessible from a single URL.
+    \item Customers need an account do the business, purchase vegetable and fruit, on JJFresh online store. If they are new to this online store, they need to register an account with their personal information including personal cellphone number and email.
+    \item Customers should be able to log into their account by input the username, in JJFresh online website is the email address, and the password in the UI provided by system.
+    \item Customers can browse products without login, but they cannot make any order in this way.
+    \item Customer account would be accessible from a single URL
   \end{enumerate}
 
   \textit{High priority}: An online store website is not only for browsing information but also a platform for trading fruits and vegetables. Without a Login system, customers can not place their orders.
-  
-  \item \textbf{Admin Login functionality}: 
+
+  \item \textbf{Admin Login functionality}:
   \begin{enumerate}
     \item The owners of JJFresh should have an admin account to manage all the orders. The admin accounts are provided by the development team at the first milestone. After the second milestone, they can create more admin account.
-    \item They are also be able to login with an email address and a password by a UI provided by system.
-    \item Both customer account and admin account would be accessible from a single URL.
+    \item They are also be able to login to the admin account by a username, may be the email address, and a password by a UI provided by system.
+    \item The admin accounts have the highest management authority. Jess and James can manage the whole business data in the database with the admin account, not just the orders. For example, they can direct modify the illegal information in the customer account without contact the customers first.
+    \item Admin account would be accessible from a single URL
   \end{enumerate}
 
-  \textit{High priority}: admin login functionality offers the way to let Jess and James manage all the orders.
+  \textit{High priority}: Admin login functionality is the basic part of the online store website. At least, Jess and James need to manage all the orders with the admin account.
 
-  \item \textbf{Management of personal information}: 
+  \item \textbf{Management of personal information}:
   \begin{enumerate}
-    \item Users should be able to add or edit their personal information. 
-    \item The name, home address, and upon three multiple contact phone numbers are included in the personal information.
+    \item Users should be able to add or edit their personal information.
+    \item The name, delivery address and upon three multiple contact phone numbers are included in the personal information. Delivery address and common contact phone number should be kept up to date.
   \end{enumerate}
 
-  \textit{High priority}: If the customers change their phone number or address, this function is important to avoid some trouble caused by outdated information. Without this feature, Jess and James may deliver products to the wrong address and cannot contact the buyer.
+  \textit{High priority}: If the customers change their personal information, such as phone number and delivery address, this function is important to avoid some trouble caused by outdated information. It will affect the smooth delivery of the products and cannot contact the buyer
 
-  \item \textbf{Product Menu system}: 
+  \item \textbf{Product Menu system}:
   \begin{enumerate}
-    \item Website should display all type of the products with different size and price to the users whenever they are going to purchase or just browse it. 
+    \item Website should display all type of the products with different size and price to the users whenever they are going to purchase or just browse it.
     \item In initial stage, JJFresh provide three options for products, the namely fruit box, vegetable box and fruit and vegetable box. Each product has three size, small, medium and large.
   \end{enumerate}
 
-  \textit{High priority}: User should know which products are sold in this online store and its size and price. Purchase cannot be made without this function because customers do not even know which fruit and vegetable they can buy.
+  \textit{High priority}: Product menu system is the important part of the online store website. Online stores need to show its merchandise and relative information, such as price, to customers to promote the business success. If the customers cannot see the products information, they cannot decide whether they need to purchase or not.
+
+  \item \textbf{Delivering time booking system}:  
+  \begin{enumerate}
+    \item Customers should be able to select a day and time for delivery.
+    \item Delivery options are in hour blocks between 4pm and 7pm. For instance, 4-5pm; 5-6pm and 6-7pm. Only two bookings are allowed in a particular hour, which can guarantee the quality of each delivery service. 
+    \item Bookings should be available for the next 7 days only. If the JJFresh deals to much business, it will avoid customers may need to wait more than one week to collect their delivery after purchase.
+  \end{enumerate}
+
+  \textit{High priority}: JJFresh online store offers delivery service. More broadly, delivery service is the basic service that online store provided. If the customers must collect their orders in person, the online store will lose its meaning compare to the physical store.
+
+  \item \textbf{Order management system}:  
+  \begin{enumerate}
+    \item Customers should be able to place their orders after selecting what they want and putting them into the shopping cart.
+    \item Customers should have the options to cancel an order. When the customer cancels an order, message control system would send an email of the cancellation to the customer.
+    \item If the customer needs to modify an order, they will need to cancel the existing order and then re-create the order.
+    \item Jess and James need to manage all the orders with an admin account through this system. For example, they may delete the problem orders and re-create them for customers.
+  \end{enumerate}
+
+  \textit{High priority}: It is the basic part of the purchase function of an online store. If the customer cannot place the order, they can hardly pay for the merchandise. The online store cannot do any business without an order management system.
+
+  \item \textbf{Message confirmation function}: This system will send the relative email message or SMS to the customers after the following behaviors.
+  \begin{enumerate}
+    \item After placing the orders, Jess and James will deal with the orders. If the orders are confirmed, an email message or SMS will be sent to the users to let them know their orders are confirmed.
+    \item If the users cancel the orders, system will send an email of the cancellation to the users.
+    \item When the delivery finished, system will also send an email or SMS to the users to inform them. It is used to avoid delivering to the wrong people and they collect them while deliveryman and customers still do not realize.  
+  \end{enumerate}
   
-  \item \textbf{Delivering time booking system}: Customers should be able to choose a day and time for delivery. Delivery options are in hour blocks between 4pm and 7pm. Bookings should be available for the next 7 days only. Only two bookings are allowed in a particular hour. Booking system is required to avoid date conflict and feasible delivery solution.
+  \textit{High priority}: Message confirmation function is the important part in the business online. It can eliminate the trouble caused by information asymmetry between the merchants and customers and improve the quality of the service in the business.
 
-  \textit{High priority}: JJFresh online store offers delivery service, the basic function of an online store. Without delivery, customers will not get their orders. If they must collect their orders in person, the online store is meaningless.
-
-  \item \textbf{Order management system}: Users should be able to place their orders after selecting what they want. If customers want to modify an order, they will need to cancel the existing order and recreate the order. Jess and James can management these orders in the website background.
-
-  \textit{High priority}: It is the basic part of the purchase function. An online store cannot do any business without an order management system.
+  \item \textbf{Database}   
+  \begin{enumerate}
+    \item The database can store all the business information including users, products and orders.
+    \item Database can centrally control and manage the data, which convenient the management of all the business data of JJFresh.
+    \item In this age, database can provide the rich data source to many projects, such as data mining. Jess and James can analyses the past orders information in the database to improve their service.
+  \end{enumerate}
   
-  \item \textbf{Message confirmation function}: After placing the orders, Jess and James will deal with the orders. If the orders are confirmed, a message will be sent to the users to let they know their orders are confirmed.
-
-  \textit{High priority}: Confirmation system is the important part in the business online. If the customers place the order while the store owner ignore it, they will never know whether their orders are confirmed or not without confirmation message system.
-
-  \item \textbf{Database system} A database system that can store information about users, products, and orders is required.
-
-  \textit{High priority}: An online store is a type of software products that need a database system to store more and more data.
+  \textit{High priority}: A database is an essential part of the online business. It provides an organized collection of data, generally stored and accessed electronically from a computer system.
 \end{enumerate}
 \subsection{What is out-of-scope?}
 The features in the future enhancements are out-of-scope:
@@ -287,13 +309,6 @@ Also, the features below are out-of-scope:
 \begin{enumerate}
   \item No navigation system on delivery is included. The system will not verify the authenticity of the address. Jess and James have to find their way to their customers' addresses themselves.
   \item No delivery distance calculate function would be provided. The system will not judge whether the address is too far, so Jess and James have to decide whether they would deliver to an address or not.
-  \item Communication service with customers except confirmation message sending is not included. Jess and James have to decide how to communicate with their customers themselves.
-\end{enumerate}
-
-Also, the features below are out-of-scope:
-\begin{enumerate}
-  \item No navigation system on delivery is included. The system will not verify the authenticity of the address. Jess and James have to find their way to their customers' addresses themselves.
-  \item No delivery distance calculate function would be provided. The system will not judge whether the address is too far, so Jess and James have to decide whether they would deliver to an address or not. 
   \item Communication service with customers except confirmation message sending is not included. Jess and James have to decide how to communicate with their customers themselves.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -339,8 +354,8 @@ JJFresh is currently busy in the morning but almost empty in the afternoon. The 
   \\
   \midrule
   Suppliers
-  & <Todo>
-  & <Todo>
+  & If the business of JJFresh online store is very good, the business between suppliers and JJFresh will also better. Suppliers will sell more products to the JJFresh.
+  & Suppliers can also improve their reputation if their business patterns success, which can offers more opportunities for cooperation with larger business patterns.
   \\
   \bottomrule
   \\
