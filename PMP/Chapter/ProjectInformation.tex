@@ -1,0 +1,213 @@
+\chapter{Project Information}
+\label{projectInformation}
+\section{Key Stakeholders}
+\label{sec:keyStakeholders}
+The key stakeholders here are classified according to their relevant interests. Different groups of stakeholders below get different benefits from the project. The detail of the roles and responsibilities definition would be discussed in Section \ref{sec:rolesResponsibilities}.
+\\
+\begin{tabularx}{0.95\linewidth}{%
+  >{\raggedright\arraybackslash}p{0.3\linewidth}%
+  >{\raggedright\arraybackslash}p{0.1\linewidth}%
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  Stakeholders & Internal/ External & Influence on Project \\
+  \midrule
+  Jess and James
+  & Internal
+  & Jess and James are the people who defined the requirements of the project. They will not directly participate in the development of the online store website. They are users of the website and can provide feedback to the development team during the development process.
+  \\
+  \midrule
+  The teaching team:
+  \begin{itemize}
+    \item Marion Zal
+    \item Doc Wallace
+    \item Rajesh Chittor Sundaram
+    \item Esther Rotimi
+    \item Subramaniam Ramasubramanian
+    \item Chong Kuok
+    \item Saksham Agrawal
+  \end{itemize}
+  & Internal
+  & The teaching team of SWEN90016 is playing the role of Product Owner in the project. They are responsible for contact with Jess and James and understand their need.  They cooperate with the Scrum master of the project and help define the product backlog. Also, they give advice and feedback to the student team during the development process.
+  \\
+  \midrule
+  The student team:
+  \begin{itemize}
+    \item Yicun Tian
+    \item Hongkang Li
+    \item Pin Wang
+    \item Chongjing Zhang
+    \item Zhangfeng Qiu
+  \end{itemize}
+
+  & Internal
+  & The student team cooperates as a Scrum team in the project. They are responsible for both planning and developing the online store project. 
+  \\
+  \midrule
+  Customers
+  & External
+  & The satisfaction of the customers is an important factor for project success. The main source of website revenue comes from them. Their feedback can help the development team improve the application.
+  \\
+  \midrule
+  Suppliers
+  & External
+  & The satisfaction of the customers is an important factor for project success. The main source of website revenue comes from them. Their feedback can help the development team improve the application.
+  \\
+  \bottomrule
+  \\
+  \caption{Stakeholder Register}  
+  \label{tab:stakeholderRegister}
+\end{tabularx}
+
+\section{Scope}
+\label{sec:scope}
+\subsection{What is in-scope?}
+\begin{enumerate}
+  \item \textbf{Customers Login functionality}:
+  \begin{enumerate}
+    \item Customers need an account do the business, purchase vegetable and fruit, on JJFresh online store. If they are new to this online store, they need to register an account with their personal information including personal cellphone number and email.
+    \item Customers should be able to log into their account by input the username, in JJFresh online website is the email address, and the password in the UI provided by system.
+    \item Customers can browse products without login, but they cannot make any order in this way.
+    \item Customer account would be accessible from a single URL
+  \end{enumerate}
+
+  \textit{High priority}: An online store website is not only for browsing information but also a platform for trading fruits and vegetables. Without a Login system, customers can not place their orders.
+
+  \item \textbf{Admin Login functionality}:
+  \begin{enumerate}
+    \item The owners of JJFresh should have an admin account to manage all the orders. The admin accounts are provided by the development team at the first milestone. After the second milestone, they can create more admin account.
+    \item They are also be able to login to the admin account by a username, may be the email address, and a password by a UI provided by system.
+    \item The admin accounts have the highest management authority. Jess and James can manage the whole business data in the database with the admin account, not just the orders. For example, they can direct modify the illegal information in the customer account without contact the customers first.
+    \item Admin account would be accessible from a single URL
+  \end{enumerate}
+
+  \textit{High priority}: Admin login functionality is the basic part of the online store website. At least, Jess and James need to manage all the orders with the admin account.
+
+  \item \textbf{Management of personal information}:
+  \begin{enumerate}
+    \item Users should be able to add or edit their personal information.
+    \item The name, delivery address and upon three multiple contact phone numbers are included in the personal information. Delivery address and common contact phone number should be kept up to date.
+  \end{enumerate}
+
+  \textit{High priority}: If the customers change their personal information, such as phone number and delivery address, this function is important to avoid some trouble caused by outdated information. It will affect the smooth delivery of the products and cannot contact the buyer
+
+  \item \textbf{Product Menu system}:
+  \begin{enumerate}
+    \item Website should display all type of the products with different size and price to the users whenever they are going to purchase or just browse it.
+    \item In initial stage, JJFresh provide three options for products, the namely fruit box, vegetable box and fruit and vegetable box. Each product has three size, small, medium and large.
+  \end{enumerate}
+
+  \textit{High priority}: Product menu system is the important part of the online store website. Online stores need to show its merchandise and relative information, such as price, to customers to promote the business success. If the customers cannot see the products information, they cannot decide whether they need to purchase or not.
+
+  \item \textbf{Delivering time booking system}:  
+  \begin{enumerate}
+    \item Customers should be able to select a day and time for delivery.
+    \item Delivery options are in hour blocks between 4pm and 7pm. For instance, 4-5pm; 5-6pm and 6-7pm. Only two bookings are allowed in a particular hour, which can guarantee the quality of each delivery service. 
+    \item Bookings should be available for the next 7 days only. If the JJFresh deals to much business, it will avoid customers may need to wait more than one week to collect their delivery after purchase.
+  \end{enumerate}
+
+  \textit{High priority}: JJFresh online store offers delivery service. More broadly, delivery service is the basic service that online store provided. If the customers must collect their orders in person, the online store will lose its meaning compare to the physical store.
+
+  \item \textbf{Order management system}:  
+  \begin{enumerate}
+    \item Customers should be able to place their orders after selecting what they want and putting them into the shopping cart.
+    \item Customers should have the options to cancel an order. When the customer cancels an order, message control system would send an email of the cancellation to the customer.
+    \item If the customer needs to modify an order, they will need to cancel the existing order and then re-create the order.
+    \item Jess and James need to manage all the orders with an admin account through this system. For example, they may delete the problem orders and re-create them for customers.
+  \end{enumerate}
+
+  \textit{High priority}: It is the basic part of the purchase function of an online store. If the customer cannot place the order, they can hardly pay for the merchandise. The online store cannot do any business without an order management system.
+
+  \item \textbf{Message confirmation function}: This system will send the relative email message or SMS to the customers after the following behaviors.
+  \begin{enumerate}
+    \item After placing the orders, Jess and James will deal with the orders. If the orders are confirmed, an email message or SMS will be sent to the users to let them know their orders are confirmed.
+    \item If the users cancel the orders, system will send an email of the cancellation to the users.
+    \item When the delivery finished, system will also send an email or SMS to the users to inform them. It is used to avoid delivering to the wrong people and they collect them while deliveryman and customers still do not realize.  
+  \end{enumerate}
+  
+  \textit{High priority}: Message confirmation function is the important part in the business online. It can eliminate the trouble caused by information asymmetry between the merchants and customers and improve the quality of the service in the business.
+
+  \item \textbf{Database}   
+  \begin{enumerate}
+    \item The database can store all the business information including users, products and orders.
+    \item Database can centrally control and manage the data, which convenient the management of all the business data of JJFresh.
+    \item In this age, database can provide the rich data source to many projects, such as data mining. Jess and James can analyses the past orders information in the database to improve their service.
+  \end{enumerate}
+  
+  \textit{High priority}: A database is an essential part of the online business. It provides an organized collection of data, generally stored and accessed electronically from a computer system.
+\end{enumerate}
+\subsection{What is out-of-scope?}
+The features in the future enhancements are out-of-scope:
+\begin{enumerate}
+  \item An online payment system is not included in the initial development of the project. The physical delivery details need to be considered by Jess and James.
+  \item No AI solution would be provided to help improve the delivery process.
+  \item Adding multiple bookings for the same time slot is not currently allowed. Only two bookings are allowed in a particular hour.
+\end{enumerate}
+
+Also, the features below are out-of-scope:
+\begin{enumerate}
+  \item No navigation system on delivery is included. The system will not verify the authenticity of the address. Jess and James have to find their way to their customers' addresses themselves.
+  \item No delivery distance calculate function would be provided. The system will not judge whether the address is too far, so Jess and James have to decide whether they would deliver to an address or not.
+  \item Communication service with customers except confirmation message sending is not included. Jess and James have to decide how to communicate with their customers themselves.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Delivery approach}
+\label{sec:deliveryApproach}
+The delivery approach we choose for our project is \textbf{Scrum}, an agile method that can provide high flexibility and quick delivery. Our decision is based on the following reasons.
+\begin{enumerate}
+  \item Scrum can provide an incremental delivery system to help the JJFresh online store retain flexibility while continually producing outcomes. As each sprint backlog represents a new release of the product, the sprint process provides an increment delivery system, which can shorten the time for saleable product delivery. The sprint review in the Scrum process can help the software development meet the requirement of the stakeholders. Also, the sooner the application enters the market, the sooner the project team can get feedback from the users to improve their product, which can help improve the user experience. Clients are continuously involved during every stage. And it can reduce waste and rework and increase the satisfaction of clients.
+  \item The sprint process in the Scrum model can provide regular adaptation to changing circumstances. Unlike the Waterfall model, which is very difficult to move back to makes changes in the previous phases, using Scrum would make the development of the JJFresh online store website able to adapt to unforeseen circumstances, allowing for changes to be easily incorporated if required.
+  \item By doing sprint review and sprint retrospective at the end of each sprint, the client and team know exactly what is complete and what is not. This reduces the risk in the development process.
+  \item Scrum intends small or mid-sized dedicated teams with high coordination, which is suitable for our team with five members. The Waterfall model, which involves large teams and lack of coordination among team members, can not meet our needs.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Business Value}
+\label{sec:businessValue}
+JJFresh is currently busy in the morning but almost empty in the afternoon. The deployment of this project will keep JJFresh's existing customers who shop in the morning and shift the afternoon business hours from offline to online, which offers delivery service for current and potential customers who cannot go to JJFresh store at that time. The online store will operate 24 / 7, which is much longer compare to the old business hours, thus provides customers with the convenience of placing orders at any time. With these advantages, the online store project would attack more customers for JJFresh. The increase in customers can increase fruit and vegetable orders, and therefore help Jess and James gain more financial benefits and avoid JJFresh from being closed. The financial and Non-Financial benefits for different stakeholders are shown in Table \ref{tab:businessValue}.
+
+\begin{tabularx}{0.95\linewidth}{%
+  >{\raggedright\arraybackslash}l%
+  >{\raggedright\arraybackslash}X%
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  Stakeholders & Financial benefits & Non-Financial Benefits \\
+  \midrule
+  Jess and James
+  & Jess and James are the business owners of the JJFresh online store project. The success of the project can help them change their business model. They would gain more customers due to the extension of the business model. Also, the increase in customers would increase the number of orders, which can increase their revenue.
+  & They can gain experience in operating an online fruit shop. The online store website can also increase the chance of JJFresh being searched by a search engine of a browser, which can improve the exposure, thereby improving their brand awareness. 
+  \\
+  \midrule
+  The teaching team
+  & The teaching team of the Software Processes and Management subject is employed by the school. They can get salary by guiding students.
+  & Teaching students in this project can increase their experience in teaching and management.
+  \\
+  \midrule
+  The student team
+  & If the project achieves commercial success, students may receive financial awards from Jess and James.
+  & They would gain software development experience from the project, which can increase their project experience and help boost their CV. Also, working as a team can improve their teamwork ability.
+  \\
+  \midrule
+  Customers
+  & For the customers who are used to buy fruits from JJFresh, home delivery can save them time and money. They don't need to spend money on transportation to jjfresh. Of course, the delivery fee must be considered. But it would be a trade-off.
+  & Customers would be able to buy fruits and vegetables with high quality in a more convenient way. Also, for unforeseen circumstances like Covid-19, buying online can reduce their unnecessary travel and keep them safe.
+  \\
+  \midrule
+  Suppliers
+  & If the business of JJFresh online store is very good, the business between suppliers and JJFresh will also better. Suppliers will sell more products to the JJFresh.
+  & Suppliers can also improve their reputation if their business patterns success, which can offers more opportunities for cooperation with larger business patterns.
+  \\
+  \bottomrule
+  \\
+  \caption{Business Value}  
+  \label{tab:businessValue}
+\end{tabularx}
+
+\section{Constraints}
+\label{sec:constraints}
+\begin{itemize}
+  \item Team members are lack of experience in Scrum. Scrum is an Agile process and is difficult to do without experience, especially an experienced Scrum master. The student who plays the role of Scrum master has no Scrum management experience before. There may be many problems during the development process.
+  \item People in the development team are unfamiliar with creating a website in Wix.com. Also, students who are responsible for the implementation of the project are not full-time workers. The efficiency of their development may be low, which may result in the delay of the project.
+  \item A virtual team may not able to follow all the processes in Scrum. Appropriate improvements and compromises would be applied to some specific processes in the Scrum. Communication in a virtual team is less frequent and less rich than face-to-face interaction. Some of the team members are not in Australia, and because of the time difference, daily Scrum will be conducted via chat, which may bring negative effects to the project.
+  \item The tool provided by Wix.com only has limited functions, which make it impossible to achieve the requirements perfectly. And the website implement by Wix.com has poor scalability. If Jess and James want to expand their business scale, the development team may have to redevelop the entire project with other web technics.
+  \item The delivery range of Jess and James is limited, and users who are too far away cannot get services.
+  \item The time limit of the project is only about one month. The overall implementation of the project may not be perfect in such a short time.
+\end{itemize}
