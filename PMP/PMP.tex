@@ -1321,9 +1321,62 @@ We have finished all the features required in the initial development process. T
 
 \clearpage
 \subsection{Risk Monitoring and Control}
-\label{sub:riskMonitoringandControl}
-So far, the project has completed all the basic functions, but the four risks defined in the initial stage of development have not yet occurred. One of the main reasons is that the product has not been used. In other words, the risks defined in Section \ref{sec:riskManagement} all occur after the product is put into use or after simulated use. Therefore, after the product owner, which is a member of our group, simulates the user for testing, we will further analyze these four risks.
-At the same time, the development process was relatively smooth, and the plan was completed in advance. Therefore, we have not defined new risks at present.
+After the product owner simulated the use of this system, risk 3 occurred.
+
+Team member Tian Yicun simulates Jess and James for order processing and merchandising, and team member Li Hongkang simulates multiple users for shopping. This risk was detected after users frequently placed orders and canceled orders for no reason.
+
+Our team used pre-defined solutions to alleviate the risk to a certain extent. The specific operations are as follows. When the problem was discovered by Tian Yicun, Jess and James, she believed that the development team should add some functions as pre-defined. For example, when the same user frequently cancels orders withour reason, the number of orders he can cancel should be limited to one week. The development team currently sets the number of cancelled orders to 3. On the other hand, if the user orders a large number of vegetables Fruit, assuming that the total value exceeds 50 AUD, she should limit the time he can order, for instance, within 24 hours after placing the order, it can be cancelled.
+
+After using the system with the above two functions added in the second simulation, they found that the risk occurrence rate was reduced, and the loss was within an estimated range. Therefore, the risk is reasonably controlled.
+
+In addition, after discussion, we discovered a new risk, the specific definition and control are as follows:
+
+\begin{tabularx}{0.95\linewidth}{%
+  l%
+  >{\raggedright\arraybackslash}p{1cm}%
+  >{\raggedright\arraybackslash}p{3cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{1cm}%
+  >{\raggedright\arraybackslash}p{5cm}}%
+  \toprule
+  Risk ID & Risk Type & Description & Probability & Impact & Justification\\
+  \midrule
+  5
+  & Business
+  & Problems with suppliers, resulting in short supply of goods.
+  & 40
+  & 3
+  & Because of the current impact of coronaviruses, the transportation and collection of vegetables and fruits are a serious problem. If the transportation time is too long, it will cause a shortage of supply. Besides many vegetables and fruits are susceptible to damage or rot due to bumps. If they do not pay attention to protection during transportation, the goods received by Jess and James may have quality problems，which will cause them to fail to complete the order on time and cause a certain economic loss.
+  \\
+  \bottomrule
+  \\
+  \label{Risk Monitor 1}
+\end{tabularx}
+
+
+\begin{table}
+\begin{tabularx}{0.95\linewidth}{%
+  l%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{6cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{3cm}}%
+  \toprule
+  Risk ID & Trigger & Owner & Response & Response Strategy Type & Resources Required\\
+  \midrule
+  5
+  & Suppliers are short of goods or have quality problems
+  & Jess and James
+  & Jess and James should find at least two suppliers. If one of them has problems, they can buy more from the other, so as to ensure the sufficient quantity of goods. In addition, they need to plan the purchase time reasonably so as not to be affected by the long transportation time.
+  & Mitigate
+  & Jess and James need to pay more attention to the situation of coronavirus and plan to purchase at least one week.
+  \\
+  \bottomrule
+  \\
+  \label{Risk Monitor 2}
+\end{tabularx}
+\end{table}
 
 
 
