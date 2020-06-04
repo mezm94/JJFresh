@@ -316,5 +316,54 @@ To avoid this section being too long, details about the timesheet for each membe
 To avoid this section being too long, details about the product design would be shown in Appendix  -- Product Design.
 
 \subsection{Risk Monitoring and Control}
+After many tests, we found that the previously defined risk 3 occurred. The specific description is after the user cancels the order, the user cannot receive or immediately receive the mail for canceling the order, resulting in the user being unable to determine whether the cancellation was successful. After testing by the development team, they found that when the user cancels the order, the administrator can see that the order has been canceled, and the user can also find that the order has been canceled in the historical order. It's just that you can't receive the email at the same time as they perform the operation. This event occurs from time to time, because the waiting time will be different depending on the mail system used by the user.
 
-TODO
+Therefore, when the risk occurs, the development team adds new functions according to the agreed treatment methods to reduce the economic loss that the risk may bring. The specific method is that no matter whether the user successfully receives the order, the system will send the same email message for the user again within 10 minutes.
+
+At the same time, when the development team perfected the system, we defined a new risk.
+
+\begin{tabularx}{0.95\linewidth}{%
+  l%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{3cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{1cm}%
+  >{\raggedright\arraybackslash}p{6cm}}%
+  \toprule
+  Risk ID & Risk Type & Description & Probability & Impact & Justification\\
+  \midrule
+  5
+  & Product
+  & Jess and James cannot find more than 10 orders at the same time
+  & 40\%
+  & 3
+  & Wix does not allow a single user to execute multiple database queries at once. In other words, when a user executes a query operation, a data set will be reached, and wix limits the number of data sets to no more than 10. That is to say when there are many users, Jess and James cannot view all the information at once.
+  \\
+  \bottomrule
+  \\
+  \label{Risk Monitor 1}
+\end{tabularx}
+
+
+\makeatletter\def@captype{}\makeatother
+\begin{tabularx}{0.95\linewidth}{%
+  l%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{5cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  >{\raggedright\arraybackslash}p{3cm}}%
+  \toprule
+  Risk ID & Trigger & Owner & Response & Response Strategy Type & Resources Required\\
+  \midrule
+  5
+  & The user executes more than 10 queries at once
+  & Development Team
+  & Restrict when users perform query operations. For example: batch processing, each processing 10 data. The result is to ensure that users can 
+  & Mitigate
+  & The development team added restrictions to deal with too many query requests.
+  \\
+  \bottomrule
+  \\
+  \label{Risk Monitor 2}
+\end{tabularx}
