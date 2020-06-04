@@ -60,7 +60,7 @@ A handy tool called \textit{Trello} is used to manage our Agile Board. As presen
   >{\raggedright\arraybackslash}p{0.15\linewidth}%
   >{\raggedright\arraybackslash}p{0.18\linewidth}%
   >{\raggedright\arraybackslash}p{0.12\linewidth}%
-  >{\raggedright\arraybackslash}p{0.5\linewidth}
+  >{\raggedright\arraybackslash}p{0.4\linewidth}
   }
   \toprule
   Date & Attendees & Format & Topic
@@ -320,15 +320,16 @@ After many tests, we found that the previously defined risk 3 occurred. The spec
 
 Therefore, when the risk occurs, the development team adds new functions according to the agreed treatment methods to reduce the economic loss that the risk may bring. The specific method is that no matter whether the user successfully receives the order, the system will send the same email message for the user again within 10 minutes.
 
-At the same time, when the development team perfected the system, we defined a new risk.
+At the same time, when the development team perfected the system, we defined a new risk, which is shown in Table \ref{tab:newRiskImpactAnalysisTable2} and Table \ref{tab:newRiskRegister2}.
 
+\clearpage
+\textbf{New Risk Impact Analysis 2}
 \begin{tabularx}{0.95\linewidth}{%
-  l%
-  >{\raggedright\arraybackslash}p{2cm}%
-  >{\raggedright\arraybackslash}p{3cm}%
-  >{\raggedright\arraybackslash}p{2cm}%
   >{\raggedright\arraybackslash}p{1cm}%
-  >{\raggedright\arraybackslash}p{6cm}}%
+  >{\raggedright\arraybackslash}p{1.2cm}%
+  >{\raggedright\arraybackslash}p{2cm}%
+  ll%
+  >{\raggedright\arraybackslash}X}
   \toprule
   Risk ID & Risk Type & Description & Probability & Impact & Justification\\
   \midrule
@@ -341,18 +342,18 @@ At the same time, when the development team perfected the system, we defined a n
   \\
   \bottomrule
   \\
-  \label{Risk Monitor 1}
+  \caption{New Risk Impact Analysis Table 2}
+  \label{tab:newRiskImpactAnalysisTable2}
 \end{tabularx}
 
-
-\makeatletter\def@captype{}\makeatother
+\textbf{New Risk Register 2}
 \begin{tabularx}{0.95\linewidth}{%
-  l%
+  >{\raggedright\arraybackslash}p{1cm}%
   >{\raggedright\arraybackslash}p{2cm}%
   >{\raggedright\arraybackslash}p{2cm}%
-  >{\raggedright\arraybackslash}p{5cm}%
+  >{\raggedright\arraybackslash}X%
   >{\raggedright\arraybackslash}p{2cm}%
-  >{\raggedright\arraybackslash}p{3cm}}%
+  >{\raggedright\arraybackslash}p{2cm}}
   \toprule
   Risk ID & Trigger & Owner & Response & Response Strategy Type & Resources Required\\
   \midrule
@@ -365,5 +366,6 @@ At the same time, when the development team perfected the system, we defined a n
   \\
   \bottomrule
   \\
-  \label{Risk Monitor 2}
+  \caption{New Risk Register 2}
+  \label{tab:newRiskRegister2}
 \end{tabularx}
